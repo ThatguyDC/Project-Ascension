@@ -56,13 +56,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4802844915924905667}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.056529973, z: -0, w: 0.9984009}
-  m_LocalPosition: {x: -0.375, y: 1.924, z: -0.046}
+  m_LocalRotation: {x: -0, y: -0.022893002, z: -0, w: 0.9997379}
+  m_LocalPosition: {x: -1.2020001, y: 1.588, z: 1.324}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8959780640450044472}
-  m_LocalEulerAnglesHint: {x: 0, y: 6.481, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -2.624, z: 0}
 --- !u!114 &8299756820272486602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,6 +77,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensX: 450
   sensY: 450
+  LowerX: -20
+  UpperX: 35
   FollowTarget: {fileID: 5498178572824753389}
   Player: {fileID: 8959780640450044472}
   PlayerScript: {fileID: 9069292237095803697}
@@ -130,16 +132,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1df551221c3dd3944858ab82dfb4f989, type: 3}
       propertyPath: m_Name
-      value: Player 1
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1df551221c3dd3944858ab82dfb4f989, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3853268898807207900, guid: 1df551221c3dd3944858ab82dfb4f989, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8e8ffccedd682024f9d019fda8303c87, type: 2}
     - target: {fileID: 5866666021909216657, guid: 1df551221c3dd3944858ab82dfb4f989, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 197a612b45e401e4781f8a7dc0a80862, type: 2}
+    - target: {fileID: 6148737315974723067, guid: 1df551221c3dd3944858ab82dfb4f989, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ad43ef8e56157b649abd95b47ac03dff, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

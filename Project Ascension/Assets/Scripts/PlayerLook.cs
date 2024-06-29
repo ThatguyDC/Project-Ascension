@@ -17,6 +17,11 @@ public class PlayerLook : MonoBehaviour
     float xRotation;
     float yRotation;
 
+    [Header("Clamp Limits")]
+
+    public float LowerX;
+    public float UpperX;
+
     [Header("Game Objects")]
 
     public Transform FollowTarget;
@@ -47,9 +52,8 @@ public class PlayerLook : MonoBehaviour
             float mouseY = Input.GetAxisRaw("Mouse Y") * sensY * Time.deltaTime;
 
             yRotation += mouseX;
-
             xRotation -= mouseY;
-            xRotation = Mathf.Clamp(xRotation, -33f, 70f); //clamps rotation of camera when looking up and down
+            xRotation = Mathf.Clamp(xRotation, LowerX, UpperX); //clamps rotation of camera when looking up and down
 
             transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
             FollowTarget.rotation = Quaternion.Euler(xRotation, yRotation, 0);
