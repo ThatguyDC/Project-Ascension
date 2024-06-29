@@ -9,16 +9,19 @@ public class Player : MonoBehaviour
 
     [Header("Game Information")]
 
+    //Game State
     public bool IsPaused = false;
 
     [Header("Player Information")]
 
+    //Movement
     public float NormalSpeed;
-
     public float WalkSpeed;
     public float SprintSpeed;
-    
 
+    [SerializeField] private bool Sprinting;
+    
+    //Orientation and Input
     public Transform PlayerOrientation;
 
     float horizontalInput;
@@ -28,22 +31,52 @@ public class Player : MonoBehaviour
     Vector3 MoveDirection;
     Rigidbody rb;
 
+    //Animations
+    private Animator PlayerAnimator;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        PlayerAnimator = GetComponent<Animator>();    
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        Move();
-        //Sprint();
+    void Update() //used for general/game-state updates like input or score, etc.
+    {        
         MyInput();
         SpeedLimit();
+        AnimatePlayer();
+    }
 
-        
+    void FixedUpdate() //used for physics-based updates like movement
+    {
+        Move();
+        Sprint();
+    }
+
+    private void AnimatePlayer()
+    {
+        //Idle
+        if (MoveDirection == Vector3.zero)
+        {
+            PlayerAnimator.SetFloat("Speed", 0); //sets animator's PlayerSpeed parameter to zero, playing idle anim
+            Debug.Log("Idle");
+
+        }
+        //Walk
+        else if (!Sprinting)
+        {
+            PlayerAnimator.SetFloat("Speed", 0.4f);
+            Debug.Log("Walk");
+
+        }
+        //Sprint
+        else
+        {
+            PlayerAnimator.SetFloat("Speed", 1);
+            Debug.Log("Sprint");
+        }
+
     }
 
     private void MyInput()
@@ -61,6 +94,7 @@ public class Player : MonoBehaviour
             //calculate movement direction
             MoveDirection = PlayerOrientation.forward * verticalInput + PlayerOrientation.right * horizontalInput;
             rb.AddForce(MoveDirection.normalized * NormalSpeed, ForceMode.Force);
+
         }
 
     }
@@ -69,12 +103,17 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            Debug.Log("Left Shift key is being pressed");
+            Debug.Log("Sprinting");
             NormalSpeed = SprintSpeed; //changes player speed to sprinting
+            Sprinting = true;
         }
         else
         {
             NormalSpeed = WalkSpeed; //sets player speed back to walking
+            Sprinting = false;
+
+
+
         }
 
     }

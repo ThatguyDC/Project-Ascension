@@ -17,7 +17,7 @@ Material:
   - _PARALLAXMAP
   m_InvalidKeywords: []
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -44,11 +44,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 100, y: 100}
+        m_Scale: {x: 50, y: 50}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 569f8adbdb0ab4940b874fd6c6f87b72, type: 3}
-        m_Scale: {x: 100, y: 100}
+        m_Scale: {x: 50, y: 50}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 2800000, guid: 332fcd13feee9ed40b3d15ced929ee8b, type: 3}
