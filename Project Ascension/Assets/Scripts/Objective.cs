@@ -51,7 +51,10 @@ public class Objective : MonoBehaviour
 
     //**Objective Goal Detection**\\
 
-    
+    public void ObjectiveReached()
+    {
+        AudioManagerScript.PlayerAudio.PlayOneShot(AudioManagerScript.ObjectiveComplete, 1f);
+    }
 
 
 }
