@@ -6,6 +6,11 @@ using UnityEngine.ProBuilder;
 
 public class Player : MonoBehaviour
 {
+    [Header("Script Comms")]
+
+    public Objective ObjectiveScript;
+    public AudioManager AudioManagerScript;
+
 
     [Header("Game Information")]
 
@@ -29,10 +34,14 @@ public class Player : MonoBehaviour
 
 
     Vector3 MoveDirection;
-    Rigidbody rb;
+    Rigidbody rb; 
 
     //Animations
     private Animator PlayerAnimator;
+
+    //Audio
+
+    public AudioSource PlayerAudioSource;
 
     void Start()
     {
@@ -54,27 +63,36 @@ public class Player : MonoBehaviour
         Sprint();
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "EndPoint")
+        {
+            ObjectiveScript.ObjectiveIndicator.SetActive(false);
+            AudioManagerScript.ObjectiveReached(); //play completion sound
+        }
+    }
+
     private void AnimatePlayer()
     {
         //Idle
         if (MoveDirection == Vector3.zero)
         {
             PlayerAnimator.SetFloat("Speed", 0); //sets animator's PlayerSpeed parameter to zero, playing idle anim
-            Debug.Log("Idle");
+            //Debug.Log("Idle");
 
         }
         //Walk
         else if (!Sprinting)
         {
             PlayerAnimator.SetFloat("Speed", 0.4f);
-            Debug.Log("Walk");
+            //Debug.Log("Walk");
 
         }
         //Sprint
         else
         {
             PlayerAnimator.SetFloat("Speed", 1);
-            Debug.Log("Sprint");
+            //Debug.Log("Sprint");
         }
 
     }
@@ -103,7 +121,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            Debug.Log("Sprinting");
+            //Debug.Log("Sprinting");
             NormalSpeed = SprintSpeed; //changes player speed to sprinting
             Sprinting = true;
         }
