@@ -20,7 +20,7 @@ public class AudioManager : MonoBehaviour
 
     [Header("Sound Effects")]
 
-    public AudioClip ObjectiveComplete;
+    public AudioClip ObjectiveCompleteSound;
 
     [Header("Music")]
 
@@ -40,6 +40,6 @@ public class AudioManager : MonoBehaviour
 
     public void ObjectiveReached()
     {
-        PlayerAudio.PlayOneShot(ObjectiveComplete, 1f);
+        PlayerAudio.PlayOneShot(ObjectiveCompleteSound, 1f);
     }
 }

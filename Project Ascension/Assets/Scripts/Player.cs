@@ -1,4 +1,4 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -52,13 +52,13 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update() //used for general/game-state updates like input or score, etc.
     {        
-        MyInput();
         SpeedLimit();
         AnimatePlayer();
     }
 
     void FixedUpdate() //used for physics-based updates like movement
     {
+        MyInput();
         Move();
         Sprint();
     }
@@ -68,6 +68,7 @@ public class Player : MonoBehaviour
         if(other.gameObject.tag == "EndPoint")
         {
             ObjectiveScript.ObjectiveIndicator.SetActive(false);
+            ObjectiveScript.ObjectiveReached();
             AudioManagerScript.ObjectiveReached(); //play completion sound
         }
     }

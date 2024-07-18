@@ -24,7 +24,7 @@ public class PlayerLook : MonoBehaviour
 
     [Header("Game Objects")]
 
-    public Transform FollowTarget;
+    //public Transform FollowTarget;
     public Transform Player;
 
 
@@ -56,7 +56,7 @@ public class PlayerLook : MonoBehaviour
             xRotation = Mathf.Clamp(xRotation, LowerX, UpperX); //clamps rotation of camera when looking up and down
 
             transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
-            FollowTarget.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+            //FollowTarget.rotation = Quaternion.Euler(xRotation, yRotation, 0);
             Player.rotation = Quaternion.Euler(0, yRotation, 0);
 
         }

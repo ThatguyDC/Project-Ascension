@@ -11,16 +11,30 @@ public class Objective : MonoBehaviour
     private AudioManager AudioManagerScript;
 
     [Header("Player Detection")]
-
+    //the ability to recognize the player's presence,
+    //and the points where they will be detected.
     [SerializeField] private GameObject Player;
     [SerializeField] private Collider PlayerCollider;
 
     [SerializeField] private Collider StartPoint;
     [SerializeField] private Collider EndPoint;
 
-    [Header("Indicators")]
+    [Header("Objective Information")]
 
+    [SerializeField] private bool ObjectiveComplete;
+
+    [Header("Indicators")]
+    //the indicator to show where an objective is, or what its goal is.
     [SerializeField] public GameObject ObjectiveIndicator;
+
+    [Header("Objective Options")]
+
+    //this can be an object to activate, a door to remove, etc.
+    //attach other desired actions/behaviors to an individual object script
+    [SerializeField] private GameObject Door; 
+    //[SerializeField] private GameObject Tool; 
+    //[SerializeField] private GameObject Note; 
+
 
     void Start()
     {
@@ -53,7 +67,22 @@ public class Objective : MonoBehaviour
 
     public void ObjectiveReached()
     {
-        AudioManagerScript.PlayerAudio.PlayOneShot(AudioManagerScript.ObjectiveComplete, 1f);
+        ObjectiveComplete = true;
+        Debug.Log("Objective Complete.");
+        DeactivateDoor();
+        AudioManagerScript.PlayerAudio.PlayOneShot(AudioManagerScript.ObjectiveCompleteSound, 1f);
+    }
+
+    public void ActivateDoor() 
+    {
+        
+        Door.SetActive(true);
+
+    }
+    public void DeactivateDoor() {
+        
+        Door.SetActive(false);
+
     }
 
 
