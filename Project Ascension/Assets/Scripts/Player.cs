@@ -1,4 +1,4 @@
-    using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -25,7 +25,6 @@ public class Player : MonoBehaviour
     public float SprintSpeed;
 
     [SerializeField] private bool Sprinting;
-    
     //Orientation and Input
     public Transform PlayerOrientation;
 
@@ -42,6 +41,16 @@ public class Player : MonoBehaviour
     //Audio
 
     public AudioSource PlayerAudioSource;
+
+    //Pickups and Carrying
+
+    public GameObject ObjectToPickUp;
+    public GameObject SpawnObject;
+    public GameObject RefPoint;
+
+    [SerializeField] private bool CarryingObject;
+
+
 
     void Start()
     {
@@ -73,10 +82,26 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.layer == 6 && CarryingObject == false) //if object is on layer 6, aka PickupLayer, then do stuff
+        {
+            //show interaction keybind to pick up object 
+            //pick up object
+            //teleport object to player's hand at the ref point
+            //deactivate trigger on pickup
+
+            SpawnObject = other.gameObject.GetComponent<Pickup>().ObjectToSpawn;
+            RefPoint = other.gameObject.GetComponent<Pickup>().PickupRefPoint;
+            PickUpObject(SpawnObject, RefPoint); //passes Pickup spawn object to function, spawns object in player's hand
+
+        }
+    }
+
     private void AnimatePlayer()
     {
         //Idle
-        if (MoveDirection == Vector3.zero)
+        if (MoveDirection == Vector3.zero && CarryingObject != true)
         {
             PlayerAnimator.SetFloat("Speed", 0); //sets animator's PlayerSpeed parameter to zero, playing idle anim
             //Debug.Log("Idle");
@@ -95,6 +120,15 @@ public class Player : MonoBehaviour
             PlayerAnimator.SetFloat("Speed", 1);
             //Debug.Log("Sprint");
         }
+
+        //Carry Idle
+        if (MoveDirection == Vector3.zero && CarryingObject == true)
+        {
+            PlayerAnimator.SetFloat("Speed", 0); //sets animator's PlayerSpeed parameter to zero, playing idle anim
+            //Debug.Log("Idle");
+
+        }
+        //Carry Walk
 
     }
 
@@ -145,6 +179,18 @@ public class Player : MonoBehaviour
         {
             Vector3 limitedVel = flatVel.normalized * NormalSpeed; //calculate what your max velocity would be with this limit applied 
             rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z); //rigid body's velocity is set to the limited velocity value
+        }
+    }
+
+    public void PickUpObject(GameObject ObjectToSpawn, GameObject RefPoint) //typeOf GameObject to indicate what is being passed through
+    {
+        if (ObjectToSpawn != null && RefPoint != null && Input.GetKeyDown(KeyCode.E)) //if the params are filled and E is pressed, 
+        {
+        Instantiate(ObjectToSpawn, RefPoint.transform.position, RefPoint.transform.rotation); //spawn passed obj at passed ref point's position and rotation
+        }
+        else
+        {
+            Debug.Log("No input detected");
         }
     }
 }

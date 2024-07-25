@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -19,6 +21,8 @@ public class PlayerTestScript : MonoBehaviour
     [Header("Player Information")]
 
     public CharacterController PlayerController;
+    public GameObject Player;
+
 
     public float NormalSpeed;
     public float WalkSpeed = 50f;
@@ -41,6 +45,22 @@ public class PlayerTestScript : MonoBehaviour
     [Header("Camera Information")]
 
     public Transform CameraTransform; //assign main camera to this, not PlayerCam
+
+    //Pickups and Carrying
+
+
+    public GameObject SpawnedObj;
+    public GameObject ObjectToPickUp;
+    public GameObject SpawnObject;
+    public GameObject RefPoint;
+    public GameObject SourceObj;
+    public GameObject SourceCopy;
+
+    [SerializeField] private float SpawnOffsetX = 4f;
+    [SerializeField] private float SpawnOffsetY = 0f;
+    [SerializeField] private float SpawnOffsetZ = 4f;
+
+    [SerializeField] private bool CarryingObject;
 
 
     private void Start()
@@ -65,6 +85,30 @@ public class PlayerTestScript : MonoBehaviour
             ObjectiveScript.ObjectiveIndicator.SetActive(false);
             ObjectiveScript.ObjectiveReached();
             AudioManagerScript.ObjectiveReached(); //play completion sound
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.layer == 6 && CarryingObject == false) //if object is on layer 6, aka PickupLayer, then do stuff
+        {
+            Debug.Log("Object on PickupLayer detected");
+
+            //show interaction keybind to pick up object 
+            //pick up object
+            //deactivate trigger on pickup
+
+
+            SpawnObject = other.GetComponent<Pickup>().ObjectToSpawn;
+            RefPoint = other.gameObject.GetComponent<Pickup>().PickupRefPoint;
+            SourceObj = other.gameObject.GetComponent<Pickup>().PickupSourceObj;
+            PickUpObject(SpawnObject, RefPoint, SourceObj); //passes Pickup spawn object and ref point, spawns given object in player's hand at ref point
+
+        }
+
+        else if (CarryingObject == true)
+        {
+            DropObject();
         }
     }
 
@@ -124,4 +168,55 @@ public class PlayerTestScript : MonoBehaviour
         }
 
     }
+
+    public void PickUpObject(GameObject ObjectToSpawn, GameObject RefPoint, GameObject SourceObj) //typeOf GameObject to indicate what is being passed through
+    {
+        if (CarryingObject == false && ObjectToSpawn != null && RefPoint != null && SourceObj != null && Input.GetKeyDown(KeyCode.E)) //if the params are filled and E is pressed, 
+        {
+            SpawnedObj = Instantiate(ObjectToSpawn, RefPoint.transform.position, RefPoint.transform.rotation); //spawn passed obj at passed ref point's position and rotation
+            SpawnedObj.transform.SetParent(RefPoint.transform); //set spawned object's parent as RefPoint
+            CarryingObject = true;
+            SourceObj.SetActive(false);
+            
+        }
+
+        else if (CarryingObject == true)
+        {
+            Debug.Log("Already Holding Object");
+
+        }
+        else if (ObjectToSpawn == null)
+        {
+            Debug.Log("Null Spawn Object");
+
+        }
+        else if (RefPoint == null)
+        {
+            Debug.Log("Null Spawn RefPoint");
+
+        }
+        else
+        {
+            Debug.Log("Missing ObjectToSpawn/RefPoint");
+        }
+
+    }
+
+    public void DropObject()
+    {
+        if (CarryingObject == true && SourceObj != null && Input.GetKeyDown(KeyCode.Q))
+        {
+            Debug.Log("iNPUT");
+            CarryingObject = false;
+            Destroy(SpawnedObj); //Destroy held copy of object
+            Instantiate(SourceObj, Player.transform.position, Player.transform.rotation); //Spawn source copy at player location when dropped //[SerializeField] private float SpawnOffsetX = 4f;
+
+        }
+        else if (SourceObj == null) 
+        {
+            Debug.Log("carrying false");
+
+        }
+    }
+
 }

@@ -8,7 +8,9 @@ public class AudioManager : MonoBehaviour
 
     [Header("Script Comms")]
 
-    [SerializeField] private Player PlayerScript;
+    private Player PlayerScript;
+    [SerializeField] private GameObject Player;
+
 
 
     [Header("Audio Sources")]
@@ -29,7 +31,8 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        
+        PlayerScript = Player.GetComponent<Player>(); //gets player script from player game object
+
     }
 
     // Update is called once per frame

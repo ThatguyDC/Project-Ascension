@@ -69,7 +69,7 @@ public class Objective : MonoBehaviour
     {
         ObjectiveComplete = true;
         Debug.Log("Objective Complete.");
-        AudioManagerScript.PlayerAudio.PlayOneShot(AudioManagerScript.ObjectiveCompleteSound, 1f);
+        AudioManagerScript.PlayerAudio.PlayOneShot(AudioManagerScript.ObjectiveCompleteSound, 1f); 
         DeactivateDoor();
         
     }
