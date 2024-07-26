@@ -46,15 +46,25 @@ public class PlayerTestScript : MonoBehaviour
 
     public Transform CameraTransform; //assign main camera to this, not PlayerCam
 
+
+
     //Pickups and Carrying
 
+    private GameObject SpawnedObj;
+    private GameObject ObjectToPickUp;
+    private GameObject SpawnObject;
+    private GameObject RefPoint;
+    private GameObject SourceObj;
 
+    [Header("Pickup Information")]
+    /*
     public GameObject SpawnedObj;
     public GameObject ObjectToPickUp;
     public GameObject SpawnObject;
     public GameObject RefPoint;
     public GameObject SourceObj;
-    public GameObject SourceCopy;
+    */
+
 
     [SerializeField] private float SpawnOffsetX = 4f;
     [SerializeField] private float SpawnOffsetY = 0f;
@@ -71,6 +81,7 @@ public class PlayerTestScript : MonoBehaviour
     {
         
         AnimatePlayer();
+        DropObject();
     }
     void FixedUpdate()
     {
@@ -106,10 +117,7 @@ public class PlayerTestScript : MonoBehaviour
 
         }
 
-        else if (CarryingObject == true)
-        {
-            DropObject();
-        }
+        
     }
 
     private void Move()
@@ -206,15 +214,29 @@ public class PlayerTestScript : MonoBehaviour
     {
         if (CarryingObject == true && SourceObj != null && Input.GetKeyDown(KeyCode.Q))
         {
-            Debug.Log("iNPUT");
+            SourceObj.SetActive(true); //set active near player
+            SourceObj.transform.position = Player.transform.position + new Vector3(SpawnOffsetX, SpawnOffsetY, SpawnOffsetZ); //move hidden Pickup to player with offsets
             CarryingObject = false;
-            Destroy(SpawnedObj); //Destroy held copy of object
-            Instantiate(SourceObj, Player.transform.position, Player.transform.rotation); //Spawn source copy at player location when dropped //[SerializeField] private float SpawnOffsetX = 4f;
+
+            //Deactivate carried object in player's hand
+            Destroy(SpawnedObj);
+
 
         }
         else if (SourceObj == null) 
         {
-            Debug.Log("carrying false");
+            Debug.Log("No SourceObj");
+
+        }
+        else if (CarryingObject == false)
+        {
+            Debug.Log("Carrying is false");
+
+        }
+
+        else
+        {
+            Debug.Log("No Input / Unknown Error");
 
         }
     }
