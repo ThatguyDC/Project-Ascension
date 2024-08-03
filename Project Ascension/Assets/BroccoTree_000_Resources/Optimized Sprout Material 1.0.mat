@@ -30,19 +30,19 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 9f4479a89db5949c78afeff4e63c9b8e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 35bfb9e4dea0b1d44a1f3707d2ae3835, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ExtraTex:
-        m_Texture: {fileID: 2800000, guid: db6efcc4957700005a3f12adbc132ece, type: 3}
+        m_Texture: {fileID: 2800000, guid: 43b19765932590dec9f3f46db888bb83, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: d340dc32f8ec29ba3806ddf593d326a7, type: 3}
+        m_Texture: {fileID: 2800000, guid: 47e323528ca2f2d238bb8dae8f5ddafa, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SubsurfaceTex:
-        m_Texture: {fileID: 2800000, guid: e76d90358e370571ab78e4740514777f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 99bab99102703dc52aac63def95b9084, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
@@ -51,14 +51,14 @@ Material:
     - _BillboardShadowFade: 0.5
     - _Glossiness: 0.25
     - _HueVariationKwToggle: 0
-    - _Metallic: 0.5
+    - _Metallic: 0.4
     - _NormalMapKwToggle: 1
-    - _SubsurfaceIndirect: 0.376
+    - _SubsurfaceIndirect: 0.4
     - _SubsurfaceKwToggle: 1
     - _TwoSided: 0
     - _WindQuality: 4
     m_Colors:
-    - _Color: {r: 0.8867924, g: 0.8867924, b: 0.8867924, a: 0.6915}
-    - _HueVariationColor: {r: 0.8867924, g: 0.8867924, b: 0.8867924, a: 1}
-    - _SubsurfaceColor: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
+    - _Color: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 0.75}
+    - _HueVariationColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+    - _SubsurfaceColor: {r: 0.41661623, g: 0.49056602, b: 0.09024564, a: 1}
   m_BuildTextureStacks: []
