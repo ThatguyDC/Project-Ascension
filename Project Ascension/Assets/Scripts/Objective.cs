@@ -7,7 +7,7 @@ public class Objective : MonoBehaviour
 
     [Header("Script Comms")]
 
-    private Player PlayerScript;
+    private PlayerTestScript PlayerScript;
     private AudioManager AudioManagerScript;
 
     [Header("Player Detection")]
@@ -39,7 +39,7 @@ public class Objective : MonoBehaviour
     void Start()
     {
 
-        PlayerScript = Player.GetComponent<Player>(); //gets player script from player game object
+        PlayerScript = Player.GetComponent<PlayerTestScript>(); //gets player script from player game object
         
     }
 

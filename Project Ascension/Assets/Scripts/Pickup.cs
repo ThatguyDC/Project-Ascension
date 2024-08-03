@@ -7,7 +7,7 @@ public class Pickup : MonoBehaviour
 
     [Header("Script Comms")]
 
-    private Player PlayerScript;
+    private PlayerTestScript PlayerScript;
     [SerializeField] private GameObject Player;
 
     [Header("Object Information")]
@@ -27,7 +27,7 @@ public class Pickup : MonoBehaviour
 
     void Start()
     {
-        PlayerScript = Player.GetComponent<Player>(); //gets player script from player game object
+        PlayerScript = Player.GetComponent<PlayerTestScript>(); //gets player script from player game object
     }
 
    

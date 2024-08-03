@@ -23,6 +23,7 @@ public class PlayerTestScript : MonoBehaviour
     public CharacterController PlayerController;
     public GameObject Player;
 
+    
 
     public float NormalSpeed;
     public float WalkSpeed = 50f;
@@ -33,6 +34,15 @@ public class PlayerTestScript : MonoBehaviour
     public float TurnSmoothing = 0.1f;
     public float TurnSmoothVelocity;
     public Vector3 Direction;
+
+    //Grounding Info
+
+    public LayerMask GroundMask; // Layer mask to specify what layers are considered ground
+    public bool IsGrounded; // Check if the player is on the ground
+
+    private Vector3 Velocity; // Current velocity of the player
+    private float Gravity = -9.81f;
+    public float GroundCheckDistance = 0.2f; // Distance to check if the player is grounded
 
 
     //Animations
@@ -82,6 +92,14 @@ public class PlayerTestScript : MonoBehaviour
         
         AnimatePlayer();
         DropObject();
+
+
+    }
+
+    private void OnDrawGizmos()
+    {
+        DebugCollider();
+
     }
     void FixedUpdate()
     {
@@ -120,9 +138,28 @@ public class PlayerTestScript : MonoBehaviour
         
     }
 
+    private void DebugCollider()
+    {
+        CharacterController characterController = Player.GetComponent<CharacterController>();
+        if (characterController != null)
+        {
+            // Draw a wireframe of the collider bounds
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireCube(characterController.bounds.center, characterController.bounds.size);
+        }
+    }
+
     private void Move()
     {
         Cursor.lockState = CursorLockMode.Locked;
+
+        // Ground check
+        IsGrounded = Physics.CheckSphere(transform.position, GroundCheckDistance, GroundMask);
+        if (IsGrounded && Velocity.y < 0)
+        {
+            Velocity.y = -2f; // Ensures the player sticks to the ground
+        }
+
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Direction = new Vector3 (horizontal, 0f, vertical).normalized;
@@ -134,7 +171,13 @@ public class PlayerTestScript : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
             Vector3 MoveDirection = Quaternion.Euler(0f, TargetAngle, 0f) * Vector3.forward;
             PlayerController.Move(MoveDirection.normalized * NormalSpeed * Time.fixedDeltaTime);
+
+            
         }
+
+        // Apply gravity
+        Velocity.y += Gravity * Time.deltaTime;
+        PlayerController.Move(Velocity * Time.deltaTime);
     }
 
     private void Sprint()
@@ -225,12 +268,12 @@ public class PlayerTestScript : MonoBehaviour
         }
         else if (SourceObj == null) 
         {
-            Debug.Log("No SourceObj");
+            //Debug.Log("No SourceObj");
 
         }
         else if (CarryingObject == false)
         {
-            Debug.Log("Carrying is false");
+            //Debug.Log("Carrying is false");
 
         }
 

@@ -30,7 +30,7 @@ public class PlayerLook : MonoBehaviour
 
     [Header("Script Comms")]
 
-    public Player PlayerScript;
+    public PlayerTestScript PlayerScript;
 
 
     void Start()

@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
 
     [Header("Script Comms")]
 
-    private Player PlayerScript;
+    private PlayerTestScript PlayerScript;
     [SerializeField] private GameObject Player;
 
 
@@ -31,7 +31,7 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        PlayerScript = Player.GetComponent<Player>(); //gets player script from player game object
+        PlayerScript = Player.GetComponent<PlayerTestScript>(); //gets player script from player game object
 
     }
 

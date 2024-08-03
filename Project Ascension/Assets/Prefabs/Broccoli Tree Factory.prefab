@@ -1,0 +1,255 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4935052310723805503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5734836338593100249}
+  - component: {fileID: 6095260725192697025}
+  - component: {fileID: 2067811875099387015}
+  - component: {fileID: 3778253429339226393}
+  m_Layer: 0
+  m_Name: previewTree
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5734836338593100249
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4935052310723805503}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2092690590850351918}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6095260725192697025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4935052310723805503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 599eb9842805191a4ad9ccfe9f38d4c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 
+  localShaderType: 3
+  globalShaderType: 3
+  _windInstance: 0
+  windType: 0
+  hasSprout1: 1
+  hasSprout2: 1
+  trunkBending: 1
+  localWindParams:
+    windQuality: 4
+    windSource: 1
+    windMain: 0
+    windTurbulence: 0
+    windDirection: {x: 1, y: 0, z: 0}
+    customWindMain: 0
+    customWindTurbulence: 0
+    customWindDirection: {x: 0, y: 0, z: 0}
+    windTimeScale: 1
+    valueTime: 1617.9756
+    valueTimeWindMain: 1067.8639
+    valueSTWindVector: {x: 1, y: 0, z: 0, w: 0}
+    valueSTWindGlobal: {x: 0, y: 0, z: 0.101, w: 1.944}
+    valueSTWindBranch: {x: 0, y: 0, z: 0, w: 0}
+    valueSTWindBranchTwitch: {x: 0.42249995, y: 1, z: 0, w: 0}
+    valueSTWindBranchWhip: {x: 0, y: 0, z: 0, w: 0}
+    valueSTWindBranchAnchor: {x: 1, y: 0, z: 0, w: 0}
+    valueSTWindBranchAdherences: {x: 0.15, y: 0.15, z: 0, w: 0}
+    valueSTWindTurbulences: {x: 0.7, y: 0.3, z: 0, w: 0}
+    valueSTWindLeaf1Ripple: {x: 0, y: 0, z: 0, w: 0}
+    valueSTWindLeaf1Tumble: {x: 0, y: 0, z: 0, w: 0}
+    valueSTWindLeaf1Twitch: {x: 0, y: 0, z: 0, w: 0}
+    valueSTWindLeaf2Ripple: {x: 0, y: 0, z: 0, w: 0}
+    valueSTWindLeaf2Tumble: {x: 0, y: 0, z: 0, w: 0}
+    valueSTWindLeaf2Twitch: {x: 0, y: 0, z: 0, w: 0}
+    valueSTWindFrondRipple: {x: 0.02, y: 0.01, z: 2, w: 10}
+  customPreviewMode: 0
+  windAppliesToRenderer: 1
+  _editorWindEnabled: 0
+--- !u!33 &2067811875099387015
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4935052310723805503}
+  m_Mesh: {fileID: 0}
+--- !u!23 &3778253429339226393
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4935052310723805503}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &6322861273323381640
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2092690590850351918}
+  - component: {fileID: 1253352563351663555}
+  m_Layer: 0
+  m_Name: Broccoli Tree Factory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2092690590850351918
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6322861273323381640}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.6698627, y: 0, z: 7.9392366}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5734836338593100249}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1253352563351663555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6322861273323381640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d0e2030c8db4b69b80a182c55f0551, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curveStepsPerUnit: 17.257143
+  treeFactoryPreferences:
+    factoryScale: 1.5
+    lods:
+    - preset: 3
+      includeInPrefab: 1
+      minPolygonSides: 3
+      maxPolygonSides: 9
+      branchAngleToleranceAtBase: 22
+      branchAngleToleranceAtTop: 40
+      sproutResolution: 0.75
+      useMeshCapAtBase: 1
+      allowBranchWelding: 1
+      allowRootWelding: 1
+      groupPercentage: 0.1
+      hasCustomValues: 0
+    - preset: 2
+      includeInPrefab: 1
+      minPolygonSides: 3
+      maxPolygonSides: 8
+      branchAngleToleranceAtBase: 34
+      branchAngleToleranceAtTop: 40
+      sproutResolution: 0.5
+      useMeshCapAtBase: 1
+      allowBranchWelding: 1
+      allowRootWelding: 1
+      groupPercentage: 0.15
+      hasCustomValues: 0
+    - preset: 0
+      includeInPrefab: 1
+      minPolygonSides: 3
+      maxPolygonSides: 5
+      branchAngleToleranceAtBase: 65
+      branchAngleToleranceAtTop: 40
+      sproutResolution: 0
+      useMeshCapAtBase: 0
+      allowBranchWelding: 1
+      allowRootWelding: 1
+      groupPercentage: 0.28
+      hasCustomValues: 0
+    previewLODIndex: 1
+    debugShowDrawSprouts: 0
+    debugShowDrawBranches: 0
+    canvasOffset: {x: -6, y: 88}
+    graphOffset: {x: 232, y: 505}
+    graphZoom: 1
+    prefabSavePath: 
+    prefabSavePrefix: BroccoTree_
+    previewMode: 0
+    preferredShader: 2
+    customBranchShader: {fileID: 0}
+    customSproutShader: {fileID: 0}
+    prefabCreateAtlas: 0
+    atlasTextureSize: 3
+    billboardTextureSize: 3
+    billboardImageCount: 8
+    prefabIncludeBillboard: 1
+    prefabBillboardPercentage: 0.4
+    prefabRepositionEnabled: 1
+    prefabCloneCustomMaterialEnabled: 1
+    prefabCopyCustomMaterialBarkTexturesEnabled: 1
+    prefabIncludeAssetsInsidePrefab: 0
+    customSeed: 3
+    appendableComponents: []
+  forcePreviewModeColored: 0
+  processType: 0
+  buildPreviewTreeVisible: 1
+  _localPipeline: {fileID: 0}
+  lastUndoProcessed: 13
+  prefabPath: 
+  _instanceId: 29816
