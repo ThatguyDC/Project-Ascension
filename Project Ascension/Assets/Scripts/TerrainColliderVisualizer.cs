@@ -18,16 +18,24 @@ public class TerrainColliderVisualizer : MonoBehaviour
 
     void OnDrawGizmos()
     {
+        if (terrain == null) terrain = GetComponent<Terrain>();
+        if (terrainData == null && terrain != null) terrainData = terrain.terrainData;
         if (terrainData == null) return;
 
         Gizmos.color = colliderColor;
 
         int heightmapWidth = terrainData.heightmapResolution;
         int heightmapHeight = terrainData.heightmapResolution;
-
         Vector3 terrainPosition = terrain.GetPosition();
+        Vector3 terrainSize = terrainData.size;
 
-        // Loop through the heightmap points and draw lines between them
+        float invHeightmapWidth = 1f / heightmapWidth;
+        float invHeightmapHeight = 1f / heightmapHeight;
+
+        // Pre-compute the x and z scaling factors
+        float xScale = terrainSize.x * invHeightmapWidth;
+        float zScale = terrainSize.z * invHeightmapHeight;
+
         for (int x = 0; x < heightmapWidth - 1; x++)
         {
             for (int z = 0; z < heightmapHeight - 1; z++)
@@ -39,21 +47,21 @@ public class TerrainColliderVisualizer : MonoBehaviour
 
                 // Calculate the world positions for the terrain points
                 Vector3 point1 = new Vector3(
-                    x / (float)heightmapWidth * terrainData.size.x,
+                    x * xScale,
                     height,
-                    z / (float)heightmapHeight * terrainData.size.z
+                    z * zScale
                 ) + terrainPosition + Vector3.up * gizmoHeightOffset;
 
                 Vector3 point2 = new Vector3(
-                    (x + 1) / (float)heightmapWidth * terrainData.size.x,
+                    (x + 1) * xScale,
                     nextHeightX,
-                    z / (float)heightmapHeight * terrainData.size.z
+                    z * zScale
                 ) + terrainPosition + Vector3.up * gizmoHeightOffset;
 
                 Vector3 point3 = new Vector3(
-                    x / (float)heightmapWidth * terrainData.size.x,
+                    x * xScale,
                     nextHeightZ,
-                    (z + 1) / (float)heightmapHeight * terrainData.size.z
+                    (z + 1) * zScale
                 ) + terrainPosition + Vector3.up * gizmoHeightOffset;
 
                 // Draw lines between the points to form the grid

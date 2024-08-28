@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 2039a0ad0a9d05549928b70362f54902, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.188276, g: 0.19113809, b: 0.1910977, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -478,7 +478,7 @@ MonoBehaviour:
   _localPipeline: {fileID: 522451293}
   lastUndoProcessed: 39
   prefabPath: Assets\BroccoTree_000.prefab
-  _instanceId: -105670
+  _instanceId: 26494
 --- !u!4 &104403385
 Transform:
   m_ObjectHideFlags: 0
@@ -1852,7 +1852,7 @@ MonoBehaviour:
       shaperOffset: 0
       _position: 1
       parentOffset: {x: 0, y: 0, z: 0}
-      originOffset: {x: 0.000000018859282, y: 1.2000209, z: -0.00000012479722}
+      originOffset: {x: 2, y: 2, z: 2}
       _maxGirth: 0.1024
       _minGirth: 0.0047999998
       girthCurve:
@@ -1959,7 +1959,7 @@ MonoBehaviour:
       shaperOffset: 0
       _position: 1
       parentOffset: {x: 0, y: 0, z: 0}
-      originOffset: {x: 0.112841345, y: 3.434497, z: 0.11109614}
+      originOffset: {x: 4, y: 4, z: 4}
       _maxGirth: 0.1024
       _minGirth: 0.0047999998
       girthCurve:
@@ -2065,8 +2065,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.8571429
-      parentOffset: {x: -0.005467185, y: 0.0020903738, z: -0.010358806}
-      originOffset: {x: 0.072065055, y: 3.1193123, z: 0.06740981}
+      parentOffset: {x: 0.01271848, y: -0.0054575517, z: -0.0072609303}
+      originOffset: {x: 3.7270043, y: 3.7088282, z: 3.7070248}
       _maxGirth: 0.1024
       _minGirth: 0.0047999998
       girthCurve:
@@ -2172,8 +2172,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.71428573
-      parentOffset: {x: -0.005008537, y: 0.012071229, z: -0.0029699234}
-      originOffset: {x: 0.089769654, y: 2.8064332, z: 0.08152819}
+      parentOffset: {x: -0.029958718, y: 0.019268403, z: 0.010690319}
+      originOffset: {x: 3.3986127, y: 3.44784, z: 3.4392617}
       _maxGirth: 0.1024
       _minGirth: 0.0047999998
       girthCurve:
@@ -2279,8 +2279,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.5714286
-      parentOffset: {x: 0.013979327, y: 0.028226063, z: 0.000502639}
-      originOffset: {x: 0.04649851, y: 2.5077379, z: 0.0487929}
+      parentOffset: {x: -0.007258354, y: 0.012876917, z: -0.005618563}
+      originOffset: {x: 3.1355987, y: 3.155734, z: 3.1372385}
       _maxGirth: 0.1024
       _minGirth: 0.0047999998
       girthCurve:
@@ -2386,8 +2386,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.42857146
-      parentOffset: {x: -0.015764017, y: 0.016531909, z: 0.005732217}
-      originOffset: {x: 0.032736138, y: 2.1742954, z: 0.041052423}
+      parentOffset: {x: -0.00024454444, y: 0.027238067, z: -0.026993524}
+      originOffset: {x: 2.8568983, y: 2.884381, z: 2.8301494}
       _maxGirth: 0.1024
       _minGirth: 0.0047999998
       girthCurve:
@@ -2493,8 +2493,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.2857143
-      parentOffset: {x: 0.020196917, y: 0.022081565, z: 0.0016282331}
-      originOffset: {x: 0.022818781, y: 1.8630346, z: 0.0035979203}
+      parentOffset: {x: 0.0076400586, y: 0.010202604, z: -0.017842663}
+      originOffset: {x: 2.5790687, y: 2.5816312, z: 2.5535858}
       _maxGirth: 0.1024
       _minGirth: 0.0047999998
       girthCurve:
@@ -2600,8 +2600,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.14285715
-      parentOffset: {x: -0.0063816616, y: 0.0042660697, z: 0.011777294}
-      originOffset: {x: -0.014124145, y: 1.5248246, z: 0.0065543805}
+      parentOffset: {x: -0.0022910445, y: -0.00016292838, z: 0.002453973}
+      originOffset: {x: 2.2834234, y: 2.2855515, z: 2.2881684}
       _maxGirth: 0.1024
       _minGirth: 0.0047999998
       girthCurve:
@@ -2707,8 +2707,8 @@ MonoBehaviour:
       helperStructureLevelId: 1
       shaperOffset: 0
       _position: 0.776
-      parentOffset: {x: 0.0045412052, y: 0.008025403, z: -0.0064044455}
-      originOffset: {x: -0.0025987928, y: 0.9392254, z: -0.0090148095}
+      parentOffset: {x: 0.0022272584, y: 0.02165084, z: -0.023878096}
+      originOffset: {x: 1.5542274, y: 1.5736508, z: 1.528122}
       _maxGirth: 0.1024
       _minGirth: 0.0047999998
       girthCurve:
@@ -2815,7 +2815,7 @@ MonoBehaviour:
       shaperOffset: 0
       _position: 1
       parentOffset: {x: 0, y: 0, z: 0}
-      originOffset: {x: -0.15643722, y: 2.4270875, z: -0.93639696}
+      originOffset: {x: 3.5542274, y: 3.5736508, z: 3.528122}
       _maxGirth: 0.1024
       _minGirth: 0.0047999998
       girthCurve:
@@ -2921,8 +2921,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.8571429
-      parentOffset: {x: 0.01637344, y: -0.009827697, z: 0.012626985}
-      originOffset: {x: -0.13491385, y: 2.1901248, z: -0.80989933}
+      parentOffset: {x: -0.0021540304, y: -0.024294278, z: 0.026448304}
+      originOffset: {x: 3.266359, y: 3.2636423, z: 3.268856}
       _maxGirth: 0.1024
       _minGirth: 0.0047999998
       girthCurve:
@@ -3028,8 +3028,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.71428573
-      parentOffset: {x: -0.01418821, y: -0.0063449945, z: -0.005600574}
-      originOffset: {x: -0.11355149, y: 1.9757898, z: -0.7039059}
+      parentOffset: {x: -0.008173956, y: -0.0037967735, z: 0.0119707305}
+      originOffset: {x: 2.9746249, y: 2.9984255, z: 2.9686642}
       _maxGirth: 0.1024
       _minGirth: 0.0047999998
       girthCurve:
@@ -3135,8 +3135,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.5714286
-      parentOffset: {x: 0.00091147795, y: -0.0009097329, z: 0.01792378}
-      originOffset: {x: -0.12489326, y: 1.7453598, z: -0.57839906}
+      parentOffset: {x: -0.0029238304, y: -0.0003047978, z: 0.003228629}
+      originOffset: {x: 2.6941607, y: 2.7162032, z: 2.6742077}
       _maxGirth: 0.1024
       _minGirth: 0.0047999998
       girthCurve:
@@ -3242,8 +3242,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.42857146
-      parentOffset: {x: 0.020812014, y: -0.01962034, z: 0.011855092}
-      originOffset: {x: -0.04610628, y: 1.5152966, z: -0.4497389}
+      parentOffset: {x: 0.009050019, y: -0.007689206, z: -0.0013608119}
+      originOffset: {x: 2.4204204, y: 2.4231045, z: 2.383904}
       _maxGirth: 0.1024
       _minGirth: 0.0047999998
       girthCurve:
@@ -3349,8 +3349,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.2857143
-      parentOffset: {x: -0.014266029, y: 0.006588694, z: 0.017734718}
-      originOffset: {x: -0.07373163, y: 1.3070166, z: -0.3411324}
+      parentOffset: {x: 0.0033244772, y: -0.0028609333, z: -0.00046354442}
+      originOffset: {x: 2.1289804, y: 2.1422184, z: 2.099087}
       _maxGirth: 0.1024
       _minGirth: 0.0047999998
       girthCurve:
@@ -3456,8 +3456,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.14285715
-      parentOffset: {x: 0.0143827, y: -0.0018447079, z: 0.031097975}
-      originOffset: {x: -0.027301718, y: 1.1022179, z: -0.1653258}
+      parentOffset: {x: 0.007874913, y: -0.024200682, z: 0.01632577}
+      originOffset: {x: 1.8478166, y: 1.8351644, z: 1.8301619}
       _maxGirth: 0.1024
       _minGirth: 0.0047999998
       girthCurve:
@@ -4034,26 +4034,26 @@ MonoBehaviour:
     customWindTurbulence: 0
     customWindDirection: {x: 0, y: 0, z: 0}
     windTimeScale: 1
-    valueTime: 9468.717
-    valueTimeWindMain: 6249.3535
+    valueTime: 480.71155
+    valueTimeWindMain: 317.26962
     valueSTWindVector: {x: 1, y: 0, z: 0, w: 0}
-    valueSTWindGlobal: {x: 4734.3584, y: 0, z: 0.101, w: 1.944}
-    valueSTWindBranch: {x: 6249.3535, y: 0, z: 0, w: 0}
+    valueSTWindGlobal: {x: 0, y: 0, z: 0.101, w: 1.944}
+    valueSTWindBranch: {x: 0, y: 0, z: 0, w: 0}
     valueSTWindBranchTwitch: {x: 0.42249995, y: 1, z: 0, w: 0}
     valueSTWindBranchWhip: {x: 0, y: 0, z: 0, w: 0}
     valueSTWindBranchAnchor: {x: 1, y: 0, z: 0, w: 0}
     valueSTWindBranchAdherences: {x: 0.15, y: 0.15, z: 0, w: 0}
     valueSTWindTurbulences: {x: 0.7, y: 0.3, z: 0, w: 0}
-    valueSTWindLeaf1Ripple: {x: 9468.717, y: 0, z: 0, w: 0}
-    valueSTWindLeaf1Tumble: {x: 6249.3535, y: 0, z: 0, w: 0}
-    valueSTWindLeaf1Twitch: {x: 0, y: 0, z: 4734.3584, w: 0}
-    valueSTWindLeaf2Ripple: {x: 9468.717, y: 0, z: 0, w: 0}
-    valueSTWindLeaf2Tumble: {x: 6249.3535, y: 0, z: 0, w: 0}
-    valueSTWindLeaf2Twitch: {x: 0, y: 0, z: 4734.3584, w: 0}
-    valueSTWindFrondRipple: {x: 787.48627, y: 0.01, z: 2, w: 10}
+    valueSTWindLeaf1Ripple: {x: 0, y: 0, z: 0, w: 0}
+    valueSTWindLeaf1Tumble: {x: 0, y: 0, z: 0, w: 0}
+    valueSTWindLeaf1Twitch: {x: 0, y: 0, z: 0, w: 0}
+    valueSTWindLeaf2Ripple: {x: 0, y: 0, z: 0, w: 0}
+    valueSTWindLeaf2Tumble: {x: 0, y: 0, z: 0, w: 0}
+    valueSTWindLeaf2Twitch: {x: 0, y: 0, z: 0, w: 0}
+    valueSTWindFrondRipple: {x: 3.5576923, y: 0.01, z: 2, w: 10}
   customPreviewMode: 0
   windAppliesToRenderer: 1
-  _editorWindEnabled: 1
+  _editorWindEnabled: 0
 --- !u!1 &252384459
 GameObject:
   m_ObjectHideFlags: 0
@@ -4082,7 +4082,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.015686275}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -4597,7 +4597,7 @@ MonoBehaviour:
   _localPipeline: {fileID: 1926603147}
   lastUndoProcessed: 26
   prefabPath: Assets\BroccoTree_001.prefab
-  _instanceId: -92796
+  _instanceId: 26536
 --- !u!4 &399350835
 Transform:
   m_ObjectHideFlags: 0
@@ -5380,7 +5380,7 @@ MonoBehaviour:
   _localPipeline: {fileID: 2016414325}
   lastUndoProcessed: 13
   prefabPath: Assets\BroccoTree_001.prefab
-  _instanceId: -61760
+  _instanceId: 26564
 --- !u!4 &505530571
 Transform:
   m_ObjectHideFlags: 0
@@ -6025,19 +6025,19 @@ PrefabInstance:
       objectReference: {fileID: 1480517452}
     - target: {fileID: 2509918745385652028, guid: 4abd88b20a969254aa7599d57426d0dc, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.97393787
+      value: 0.97657174
       objectReference: {fileID: 0}
     - target: {fileID: 2509918745385652028, guid: 4abd88b20a969254aa7599d57426d0dc, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.2268152
+      value: -0.21519107
       objectReference: {fileID: 0}
     - target: {fileID: 2509918745385652028, guid: 4abd88b20a969254aa7599d57426d0dc, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00000001306924
+      value: -0.00045010302
       objectReference: {fileID: 0}
     - target: {fileID: 2509918745385652028, guid: 4abd88b20a969254aa7599d57426d0dc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000014116287
+      value: -0.0004746869
       objectReference: {fileID: 0}
     - target: {fileID: 2779145557569469455, guid: 4abd88b20a969254aa7599d57426d0dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6053,19 +6053,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2779145557569469455, guid: 4abd88b20a969254aa7599d57426d0dc, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9812693
+      value: 0.9834954
       objectReference: {fileID: 0}
     - target: {fileID: 2779145557569469455, guid: 4abd88b20a969254aa7599d57426d0dc, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.19264124
+      value: -0.1809321
       objectReference: {fileID: 0}
     - target: {fileID: 2779145557569469455, guid: 4abd88b20a969254aa7599d57426d0dc, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1e-45
+      value: -0.00046641668
       objectReference: {fileID: 0}
     - target: {fileID: 2779145557569469455, guid: 4abd88b20a969254aa7599d57426d0dc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 1e-45
+      value: -0.00045866758
       objectReference: {fileID: 0}
     - target: {fileID: 4991735861431272673, guid: 4abd88b20a969254aa7599d57426d0dc, type: 3}
       propertyPath: m_FollowOffset.y
@@ -6077,15 +6077,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5241849087859560265, guid: 4abd88b20a969254aa7599d57426d0dc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 129.44598
+      value: -115.05399
       objectReference: {fileID: 0}
     - target: {fileID: 5241849087859560265, guid: 4abd88b20a969254aa7599d57426d0dc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.3532672
+      value: 0.6532669
       objectReference: {fileID: 0}
     - target: {fileID: 5241849087859560265, guid: 4abd88b20a969254aa7599d57426d0dc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 399.6
+      value: 442
       objectReference: {fileID: 0}
     - target: {fileID: 5241849087859560265, guid: 4abd88b20a969254aa7599d57426d0dc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6117,19 +6117,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6611906061817108879, guid: 4abd88b20a969254aa7599d57426d0dc, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.96550477
+      value: 0.9685394
       objectReference: {fileID: 0}
     - target: {fileID: 6611906061817108879, guid: 4abd88b20a969254aa7599d57426d0dc, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.26038545
+      value: -0.2488594
       objectReference: {fileID: 0}
     - target: {fileID: 6611906061817108879, guid: 4abd88b20a969254aa7599d57426d0dc, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00000001686827
+      value: -0.00043338572
       objectReference: {fileID: 0}
     - target: {fileID: 6611906061817108879, guid: 4abd88b20a969254aa7599d57426d0dc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000019534458
+      value: -0.00048995746
       objectReference: {fileID: 0}
     - target: {fileID: 7906152833952241811, guid: 4abd88b20a969254aa7599d57426d0dc, type: 3}
       propertyPath: m_LookAt
@@ -6137,31 +6137,31 @@ PrefabInstance:
       objectReference: {fileID: 1480517452}
     - target: {fileID: 8599270331580384825, guid: 4abd88b20a969254aa7599d57426d0dc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.0018692017
       objectReference: {fileID: 0}
     - target: {fileID: 8599270331580384825, guid: 4abd88b20a969254aa7599d57426d0dc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.47788206
       objectReference: {fileID: 0}
     - target: {fileID: 8599270331580384825, guid: 4abd88b20a969254aa7599d57426d0dc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1.0133817
       objectReference: {fileID: 0}
     - target: {fileID: 8599270331580384825, guid: 4abd88b20a969254aa7599d57426d0dc, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.96550477
+      value: 0.9685394
       objectReference: {fileID: 0}
     - target: {fileID: 8599270331580384825, guid: 4abd88b20a969254aa7599d57426d0dc, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.2603855
+      value: -0.2488594
       objectReference: {fileID: 0}
     - target: {fileID: 8599270331580384825, guid: 4abd88b20a969254aa7599d57426d0dc, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000033736548
+      value: -0.00043337123
       objectReference: {fileID: 0}
     - target: {fileID: 8599270331580384825, guid: 4abd88b20a969254aa7599d57426d0dc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000039068922
+      value: -0.00048994116
       objectReference: {fileID: 0}
     - target: {fileID: 8697948717317988973, guid: 4abd88b20a969254aa7599d57426d0dc, type: 3}
       propertyPath: m_FollowOffset.y
@@ -7256,26 +7256,26 @@ MonoBehaviour:
     customWindTurbulence: 0
     customWindDirection: {x: 0, y: 0, z: 0}
     windTimeScale: 1
-    valueTime: 9468.717
-    valueTimeWindMain: 6249.3535
+    valueTime: 480.71155
+    valueTimeWindMain: 317.26962
     valueSTWindVector: {x: 1, y: 0, z: 0, w: 0}
-    valueSTWindGlobal: {x: 4734.3584, y: 0, z: 0.101, w: 1.944}
-    valueSTWindBranch: {x: 6249.3535, y: 0, z: 0, w: 0}
+    valueSTWindGlobal: {x: 0, y: 0, z: 0.101, w: 1.944}
+    valueSTWindBranch: {x: 0, y: 0, z: 0, w: 0}
     valueSTWindBranchTwitch: {x: 0.42249995, y: 1, z: 0, w: 0}
     valueSTWindBranchWhip: {x: 0, y: 0, z: 0, w: 0}
     valueSTWindBranchAnchor: {x: 1, y: 0, z: 0, w: 0}
     valueSTWindBranchAdherences: {x: 0.15, y: 0.15, z: 0, w: 0}
     valueSTWindTurbulences: {x: 0.7, y: 0.3, z: 0, w: 0}
-    valueSTWindLeaf1Ripple: {x: 9468.717, y: 0, z: 0, w: 0}
-    valueSTWindLeaf1Tumble: {x: 6249.3535, y: 0, z: 0, w: 0}
-    valueSTWindLeaf1Twitch: {x: 0, y: 0, z: 4734.3584, w: 0}
-    valueSTWindLeaf2Ripple: {x: 9468.717, y: 0, z: 0, w: 0}
-    valueSTWindLeaf2Tumble: {x: 6249.3535, y: 0, z: 0, w: 0}
-    valueSTWindLeaf2Twitch: {x: 0, y: 0, z: 4734.3584, w: 0}
-    valueSTWindFrondRipple: {x: 787.48627, y: 0.01, z: 2, w: 10}
+    valueSTWindLeaf1Ripple: {x: 0, y: 0, z: 0, w: 0}
+    valueSTWindLeaf1Tumble: {x: 0, y: 0, z: 0, w: 0}
+    valueSTWindLeaf1Twitch: {x: 0, y: 0, z: 0, w: 0}
+    valueSTWindLeaf2Ripple: {x: 0, y: 0, z: 0, w: 0}
+    valueSTWindLeaf2Tumble: {x: 0, y: 0, z: 0, w: 0}
+    valueSTWindLeaf2Twitch: {x: 0, y: 0, z: 0, w: 0}
+    valueSTWindFrondRipple: {x: 3.5576923, y: 0.01, z: 2, w: 10}
   customPreviewMode: 0
   windAppliesToRenderer: 1
-  _editorWindEnabled: 1
+  _editorWindEnabled: 0
 --- !u!114 &1061097040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8169,6 +8169,79 @@ MonoBehaviour:
     vector4UV0Enabled: 0
     selectedAreaIndex: 0
   selectedMapIndex: 1
+--- !u!1001 &1441838692
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1047196719699430387, guid: f202ce90a84a4374fad39e2a99ac0288, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -730.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297617145597638453, guid: f202ce90a84a4374fad39e2a99ac0288, type: 3}
+      propertyPath: m_Name
+      value: uiManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551150014620518885, guid: f202ce90a84a4374fad39e2a99ac0288, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551150014620518885, guid: f202ce90a84a4374fad39e2a99ac0288, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551150014620518885, guid: f202ce90a84a4374fad39e2a99ac0288, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551150014620518885, guid: f202ce90a84a4374fad39e2a99ac0288, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551150014620518885, guid: f202ce90a84a4374fad39e2a99ac0288, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551150014620518885, guid: f202ce90a84a4374fad39e2a99ac0288, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551150014620518885, guid: f202ce90a84a4374fad39e2a99ac0288, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551150014620518885, guid: f202ce90a84a4374fad39e2a99ac0288, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551150014620518885, guid: f202ce90a84a4374fad39e2a99ac0288, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551150014620518885, guid: f202ce90a84a4374fad39e2a99ac0288, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3603064157190644988, guid: f202ce90a84a4374fad39e2a99ac0288, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3603064157190644988, guid: f202ce90a84a4374fad39e2a99ac0288, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1104.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9103767218403779802, guid: f202ce90a84a4374fad39e2a99ac0288, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f202ce90a84a4374fad39e2a99ac0288, type: 3}
 --- !u!1001 &1480517448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8205,21 +8278,25 @@ PrefabInstance:
       propertyPath: AudioManagerScript
       value: 
       objectReference: {fileID: 692595239}
+    - target: {fileID: 4808837776779471353, guid: dd703c1ed82afd84382b639e9b58a09b, type: 3}
+      propertyPath: m_Height
+      value: 1.8
+      objectReference: {fileID: 0}
     - target: {fileID: 8582833572677826690, guid: dd703c1ed82afd84382b639e9b58a09b, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8959780640450044472, guid: dd703c1ed82afd84382b639e9b58a09b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 129.54599
+      value: -114.953995
       objectReference: {fileID: 0}
     - target: {fileID: 8959780640450044472, guid: dd703c1ed82afd84382b639e9b58a09b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.743267
+      value: 2.0432668
       objectReference: {fileID: 0}
     - target: {fileID: 8959780640450044472, guid: dd703c1ed82afd84382b639e9b58a09b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 401.6
+      value: 444
       objectReference: {fileID: 0}
     - target: {fileID: 8959780640450044472, guid: dd703c1ed82afd84382b639e9b58a09b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8516,26 +8593,26 @@ MonoBehaviour:
     customWindTurbulence: 0
     customWindDirection: {x: 0, y: 0, z: 0}
     windTimeScale: 1
-    valueTime: 9468.717
-    valueTimeWindMain: 6249.3535
+    valueTime: 480.71155
+    valueTimeWindMain: 317.26962
     valueSTWindVector: {x: 1, y: 0, z: 0, w: 0}
-    valueSTWindGlobal: {x: 4734.3584, y: 0, z: 0.161, w: 1.944}
-    valueSTWindBranch: {x: 6249.3535, y: 0, z: 0, w: 0}
+    valueSTWindGlobal: {x: 0, y: 0, z: 0.161, w: 1.944}
+    valueSTWindBranch: {x: 0, y: 0, z: 0, w: 0}
     valueSTWindBranchTwitch: {x: 0.42249995, y: 1, z: 0, w: 0}
     valueSTWindBranchWhip: {x: 0, y: 0, z: 0, w: 0}
     valueSTWindBranchAnchor: {x: 1, y: 0, z: 0, w: 0}
     valueSTWindBranchAdherences: {x: 0.15, y: 0.15, z: 0, w: 0}
     valueSTWindTurbulences: {x: 0.7, y: 0.3, z: 0, w: 0}
-    valueSTWindLeaf1Ripple: {x: 9468.717, y: 0, z: 0, w: 0}
-    valueSTWindLeaf1Tumble: {x: 6249.3535, y: 0, z: 0, w: 0}
-    valueSTWindLeaf1Twitch: {x: 0, y: 0, z: 4734.3584, w: 0}
-    valueSTWindLeaf2Ripple: {x: 9468.717, y: 0, z: 0, w: 0}
-    valueSTWindLeaf2Tumble: {x: 6249.3535, y: 0, z: 0, w: 0}
-    valueSTWindLeaf2Twitch: {x: 0, y: 0, z: 4734.3584, w: 0}
-    valueSTWindFrondRipple: {x: 788.7683, y: 0.01, z: 2, w: 10}
+    valueSTWindLeaf1Ripple: {x: 0, y: 0, z: 0, w: 0}
+    valueSTWindLeaf1Tumble: {x: 0, y: 0, z: 0, w: 0}
+    valueSTWindLeaf1Twitch: {x: 0, y: 0, z: 0, w: 0}
+    valueSTWindLeaf2Ripple: {x: 0, y: 0, z: 0, w: 0}
+    valueSTWindLeaf2Tumble: {x: 0, y: 0, z: 0, w: 0}
+    valueSTWindLeaf2Twitch: {x: 0, y: 0, z: 0, w: 0}
+    valueSTWindFrondRipple: {x: 3.5576923, y: 0.01, z: 2, w: 10}
   customPreviewMode: 0
   windAppliesToRenderer: 1
-  _editorWindEnabled: 1
+  _editorWindEnabled: 0
 --- !u!1 &1588673232
 GameObject:
   m_ObjectHideFlags: 0
@@ -11130,7 +11207,7 @@ MonoBehaviour:
       shaperOffset: 0
       _position: 1
       parentOffset: {x: 0, y: 0, z: 0}
-      originOffset: {x: 0.00000020489097, y: 2.1543798, z: 0.00000005401671}
+      originOffset: {x: 2, y: 2, z: 2}
       _maxGirth: 0.11897729
       _minGirth: 0.01
       girthCurve:
@@ -11237,7 +11314,7 @@ MonoBehaviour:
       shaperOffset: 0
       _position: 1
       parentOffset: {x: 0, y: 0, z: 0}
-      originOffset: {x: -0.25594786, y: 4.6487627, z: -0.06674056}
+      originOffset: {x: 4, y: 4, z: 4}
       _maxGirth: 0.11897729
       _minGirth: 0.01
       girthCurve:
@@ -11343,8 +11420,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.93333334
-      parentOffset: {x: 0.007783762, y: 0.034475524, z: 0.02700213}
-      originOffset: {x: -0.2517469, y: 4.515063, z: -0.081381276}
+      parentOffset: {x: -0.0000028943512, y: 0.007664391, z: -0.007661496}
+      originOffset: {x: 3.866664, y: 3.8743312, z: 3.8590052}
       _maxGirth: 0.11897729
       _minGirth: 0.01
       girthCurve:
@@ -11450,8 +11527,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.8666667
-      parentOffset: {x: -0.010166365, y: -0.01911288, z: 0.024829274}
-      originOffset: {x: -0.22507763, y: 4.2981353, z: -0.06022442}
+      parentOffset: {x: 0.0044263913, y: 0.0022053104, z: -0.006631702}
+      originOffset: {x: 3.7377598, y: 3.7355387, z: 3.7267017}
       _maxGirth: 0.11897729
       _minGirth: 0.01
       girthCurve:
@@ -11557,8 +11634,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.8
-      parentOffset: {x: -0.014512756, y: 0.0009803624, z: 0.015750792}
-      originOffset: {x: -0.20197779, y: 4.153716, z: -0.041600388}
+      parentOffset: {x: -0.0032632556, y: 0.029892188, z: -0.026628934}
+      originOffset: {x: 3.5967367, y: 3.629892, z: 3.573371}
       _maxGirth: 0.11897729
       _minGirth: 0.01
       girthCurve:
@@ -11664,8 +11741,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.73333335
-      parentOffset: {x: 0.0053765136, y: 0.010432603, z: -0.018100971}
-      originOffset: {x: -0.16543488, y: 3.9974537, z: -0.048200995}
+      parentOffset: {x: -0.022300852, y: 0.013980862, z: 0.008319993}
+      originOffset: {x: 3.4443657, y: 3.4806476, z: 3.4749868}
       _maxGirth: 0.11897729
       _minGirth: 0.01
       girthCurve:
@@ -11771,8 +11848,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.6666666
-      parentOffset: {x: -0.002868959, y: -0.03309571, z: -0.029522631}
-      originOffset: {x: -0.15972139, y: 3.7877038, z: -0.034106813}
+      parentOffset: {x: 0.0015560333, y: 0.0034473797, z: -0.0050034137}
+      originOffset: {x: 3.3348892, y: 3.3367805, z: 3.3283298}
       _maxGirth: 0.11897729
       _minGirth: 0.01
       girthCurve:
@@ -11878,8 +11955,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.59999996
-      parentOffset: {x: -0.044199463, y: -0.023375647, z: 0.030906891}
-      originOffset: {x: -0.13602775, y: 3.6353538, z: -0.031810768}
+      parentOffset: {x: 0.016017254, y: -0.021636019, z: 0.0056187664}
+      originOffset: {x: 3.216017, y: 3.1783638, z: 3.2056186}
       _maxGirth: 0.11897729
       _minGirth: 0.01
       girthCurve:
@@ -11985,8 +12062,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.5333333
-      parentOffset: {x: 0.0048502106, y: -0.057850756, z: 0.037488505}
-      originOffset: {x: -0.12706503, y: 3.4248495, z: -0.050197378}
+      parentOffset: {x: -0.010954746, y: 0.029288791, z: -0.018334046}
+      originOffset: {x: 3.0557117, y: 3.0959554, z: 3.0483325}
       _maxGirth: 0.11897729
       _minGirth: 0.01
       girthCurve:
@@ -12092,8 +12169,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.46666664
-      parentOffset: {x: 0.04913576, y: 0.012205748, z: 0.019533224}
-      originOffset: {x: -0.069571406, y: 3.3287263, z: -0.0429314}
+      parentOffset: {x: 0.012660593, y: 0.00008433384, z: -0.012744929}
+      originOffset: {x: 2.945994, y: 2.9334178, z: 2.9205885}
       _maxGirth: 0.11897729
       _minGirth: 0.01
       girthCurve:
@@ -12199,8 +12276,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.39999998
-      parentOffset: {x: 0.030476727, y: 0.007971408, z: -0.011107603}
-      originOffset: {x: -0.04731422, y: 3.1621363, z: -0.045243196}
+      parentOffset: {x: 0.011183569, y: 0.0026959588, z: -0.01387953}
+      originOffset: {x: 2.8111835, y: 2.802696, z: 2.7861204}
       _maxGirth: 0.11897729
       _minGirth: 0.01
       girthCurve:
@@ -12306,8 +12383,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.3333333
-      parentOffset: {x: -0.029150335, y: 0.0021351953, z: 0.0024406812}
-      originOffset: {x: -0.08143402, y: 2.991177, z: -0.018529234}
+      parentOffset: {x: 0.015102911, y: -0.013716864, z: -0.0013860457}
+      originOffset: {x: 2.6817694, y: 2.6529496, z: 2.6652806}
       _maxGirth: 0.11897729
       _minGirth: 0.01
       girthCurve:
@@ -12413,8 +12490,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.26666662
-      parentOffset: {x: 0.002057096, y: 0.0029599823, z: 0.031683356}
-      originOffset: {x: -0.016939836, y: 2.8271031, z: 0.016847044}
+      parentOffset: {x: -0.0026921278, y: 0.010530865, z: -0.007838737}
+      originOffset: {x: 2.530641, y: 2.5438643, z: 2.5254946}
       _maxGirth: 0.11897729
       _minGirth: 0.01
       girthCurve:
@@ -12520,8 +12597,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.19999996
-      parentOffset: {x: -0.018808411, y: -0.0081848325, z: 0.005906492}
-      originOffset: {x: -0.026947122, y: 2.6487994, z: 0.0009906841}
+      parentOffset: {x: -0.0037595595, y: 0.0009750507, z: 0.0027845094}
+      originOffset: {x: 2.3962402, y: 2.400975, z: 2.4027843}
       _maxGirth: 0.11897729
       _minGirth: 0.01
       girthCurve:
@@ -12627,8 +12704,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.1333333
-      parentOffset: {x: 0.0332933, y: 0.026081234, z: 0.012767384}
-      originOffset: {x: 0.0506263, y: 2.5163455, z: 0.0046349317}
+      parentOffset: {x: 0.003373021, y: -0.0028331303, z: -0.0005398906}
+      originOffset: {x: 2.2700396, y: 2.2638335, z: 2.2661269}
       _maxGirth: 0.11897729
       _minGirth: 0.01
       girthCurve:
@@ -12734,8 +12811,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.06666662
-      parentOffset: {x: -0.03952924, y: -0.015041208, z: 0.003327895}
-      originOffset: {x: -0.005554259, y: 2.3075604, z: -0.0068392437}
+      parentOffset: {x: 0.0073275813, y: -0.022122353, z: 0.014794775}
+      originOffset: {x: 2.1406608, y: 2.1112108, z: 2.148128}
       _maxGirth: 0.11897729
       _minGirth: 0.01
       girthCurve:
@@ -12841,8 +12918,8 @@ MonoBehaviour:
       helperStructureLevelId: 3
       shaperOffset: 0
       _position: 0.03143885
-      parentOffset: {x: -0.04848093, y: -0.01056803, z: 0.028515458}
-      originOffset: {x: -0.029378846, y: 0.057166554, z: 0.029802516}
+      parentOffset: {x: -0.04804121, y: 0.0040568397, z: 0.04398437}
+      originOffset: {x: 0.01483649, y: 0.06693454, z: 0.10686207}
       _maxGirth: 0.138
       _minGirth: 0.010000001
       girthCurve:
@@ -12949,7 +13026,7 @@ MonoBehaviour:
       shaperOffset: 0
       _position: 1
       parentOffset: {x: 0, y: 0, z: 0}
-      originOffset: {x: -0.7148259, y: -0.3302599, z: 0.60811436}
+      originOffset: {x: 2.0148365, y: 2.0669346, z: 2.106862}
       _maxGirth: 0.138
       _minGirth: 0.010000001
       girthCurve:
@@ -13055,8 +13132,8 @@ MonoBehaviour:
       helperStructureLevelId: 5
       shaperOffset: 0
       _position: 0.7999013
-      parentOffset: {x: -0.015592903, y: 0.0048942706, z: 0.003072025}
-      originOffset: {x: -0.58231676, y: -0.26411262, z: 0.49675435}
+      parentOffset: {x: 0.0015252904, y: 0.0044717686, z: -0.0059970594}
+      originOffset: {x: 1.6161643, y: 1.671209, z: 1.7006676}
       _maxGirth: 0.138
       _minGirth: 0.010000001
       girthCurve:
@@ -13162,8 +13239,8 @@ MonoBehaviour:
       helperStructureLevelId: 5
       shaperOffset: 0
       _position: 0.5998026
-      parentOffset: {x: -0.014760849, y: -0.00961027, z: -0.011443029}
-      originOffset: {x: -0.44051498, y: -0.19322264, z: 0.37650818}
+      parentOffset: {x: 0.00070271845, y: 0.0020835735, z: -0.0027862925}
+      originOffset: {x: 1.2151445, y: 1.2686234, z: 1.303681}
       _maxGirth: 0.138
       _minGirth: 0.010000001
       girthCurve:
@@ -13269,8 +13346,8 @@ MonoBehaviour:
       helperStructureLevelId: 3
       shaperOffset: 0
       _position: 0.030787924
-      parentOffset: {x: 0.0022946587, y: 0.004080391, z: -0.06542014}
-      originOffset: {x: 0.021369413, y: 0.07041256, z: -0.06416223}
+      parentOffset: {x: 0.020414332, y: 0.02054114, z: -0.040955476}
+      originOffset: {x: 0.08199018, y: 0.08211699, z: 0.020620372}
       _maxGirth: 0.138
       _minGirth: 0.010000001
       girthCurve:
@@ -13377,7 +13454,7 @@ MonoBehaviour:
       shaperOffset: 0
       _position: 1
       parentOffset: {x: 0, y: 0, z: 0}
-      originOffset: {x: 0.25983828, y: -0.2921699, z: -0.97973955}
+      originOffset: {x: 2.0819902, y: 2.082117, z: 2.0206203}
       _maxGirth: 0.138
       _minGirth: 0.010000001
       girthCurve:
@@ -13483,8 +13560,8 @@ MonoBehaviour:
       helperStructureLevelId: 5
       shaperOffset: 0
       _position: 0.7999013
-      parentOffset: {x: -0.0003405895, y: -0.014034478, z: 0.018753199}
-      originOffset: {x: 0.2097025, y: -0.2159556, z: -0.7859715}
+      parentOffset: {x: 0.00348765, y: 0.009437034, z: -0.012924686}
+      originOffset: {x: 1.6852804, y: 1.6913567, z: 1.6074983}
       _maxGirth: 0.138
       _minGirth: 0.010000001
       girthCurve:
@@ -13590,8 +13667,8 @@ MonoBehaviour:
       helperStructureLevelId: 5
       shaperOffset: 0
       _position: 0.5998026
-      parentOffset: {x: -0.01322759, y: -0.016436309, z: 0.021480378}
-      originOffset: {x: 0.16028602, y: -0.14622585, z: -0.59679747}
+      parentOffset: {x: 0.0012455727, y: 0.003106813, z: -0.004352386}
+      originOffset: {x: 1.2828411, y: 1.284829, z: 1.2158732}
       _maxGirth: 0.138
       _minGirth: 0.010000001
       girthCurve:
@@ -13697,8 +13774,8 @@ MonoBehaviour:
       helperStructureLevelId: 3
       shaperOffset: 0
       _position: 0.016385043
-      parentOffset: {x: 0.06283824, y: 0.012517269, z: 0.002849585}
-      originOffset: {x: 0.08138523, y: 0.047818627, z: 0.0035025827}
+      parentOffset: {x: 0.052839804, y: -0.04069721, z: -0.012142598}
+      originOffset: {x: 0.08560989, y: -0.007927123, z: 0.020627487}
       _maxGirth: 0.138
       _minGirth: 0.010000001
       girthCurve:
@@ -13805,7 +13882,7 @@ MonoBehaviour:
       shaperOffset: 0
       _position: 1
       parentOffset: {x: 0, y: 0, z: 0}
-      originOffset: {x: 0.8159016, y: -0.3436604, z: 0.02991162}
+      originOffset: {x: 2.08561, y: 1.9920728, z: 2.0206275}
       _maxGirth: 0.138
       _minGirth: 0.010000001
       girthCurve:
@@ -13911,8 +13988,8 @@ MonoBehaviour:
       helperStructureLevelId: 5
       shaperOffset: 0
       _position: 0.7999013
-      parentOffset: {x: -0.000244273, y: -0.0030335195, z: -0.020479912}
-      originOffset: {x: 0.6677847, y: -0.26922536, z: 0.024285013}
+      parentOffset: {x: -0.002331656, y: -0.0063882703, z: 0.008719927}
+      originOffset: {x: 1.6830809, y: 1.5854871, z: 1.62915}
       _maxGirth: 0.138
       _minGirth: 0.010000001
       girthCurve:
@@ -14018,8 +14095,8 @@ MonoBehaviour:
       helperStructureLevelId: 5
       shaperOffset: 0
       _position: 0.5998026
-      parentOffset: {x: 0.007797572, y: -0.013709467, z: -0.015989974}
-      originOffset: {x: 0.52270097, y: -0.21326816, z: 0.019068912}
+      parentOffset: {x: 0.0003643197, y: 0.0010583319, z: -0.0014226518}
+      originOffset: {x: 1.2855794, y: 1.1927364, z: 1.2188101}
       _maxGirth: 0.138
       _minGirth: 0.010000001
       girthCurve:
@@ -14125,8 +14202,8 @@ MonoBehaviour:
       helperStructureLevelId: 3
       shaperOffset: 0
       _position: 0.011446887
-      parentOffset: {x: 0.0042018713, y: 0.0032096214, z: 0.06404666}
-      originOffset: {x: 0.022631112, y: 0.027871786, z: 0.06452129}
+      parentOffset: {x: 0.0010521329, y: -0.04272569, z: 0.04167356}
+      originOffset: {x: 0.023945907, y: -0.019831916, z: 0.064567335}
       _maxGirth: 0.138
       _minGirth: 0.010000001
       girthCurve:
@@ -14233,7 +14310,7 @@ MonoBehaviour:
       shaperOffset: 0
       _position: 1
       parentOffset: {x: 0, y: 0, z: 0}
-      originOffset: {x: 0.23809107, y: -0.3166169, z: 0.8069048}
+      originOffset: {x: 2.0239458, y: 1.9801681, z: 2.0645673}
       _maxGirth: 0.138
       _minGirth: 0.010000001
       girthCurve:
@@ -14339,8 +14416,8 @@ MonoBehaviour:
       helperStructureLevelId: 5
       shaperOffset: 0
       _position: 0.69985193
-      parentOffset: {x: 0.002387988, y: -0.0072579063, z: 0.01588555}
-      originOffset: {x: 0.17546634, y: -0.23925075, z: 0.59093255}
+      parentOffset: {x: -0.000105189574, y: -0.00033066637, z: 0.00043585603}
+      originOffset: {x: 1.4235446, y: 1.3795413, z: 1.464707}
       _maxGirth: 0.138
       _minGirth: 0.010000001
       girthCurve:
@@ -14446,8 +14523,8 @@ MonoBehaviour:
       helperStructureLevelId: 3
       shaperOffset: 0
       _position: 0.010345763
-      parentOffset: {x: -0.052109044, y: -0.010109643, z: -0.028744474}
-      originOffset: {x: -0.03369717, y: 0.012180165, z: -0.028314168}
+      parentOffset: {x: -0.017148824, y: 0.027773585, z: -0.010624763}
+      originOffset: {x: 0.0035427008, y: 0.04846511, z: 0.010066763}
       _maxGirth: 0.138
       _minGirth: 0.010000001
       girthCurve:
@@ -14554,7 +14631,7 @@ MonoBehaviour:
       shaperOffset: 0
       _position: 1
       parentOffset: {x: 0, y: 0, z: 0}
-      originOffset: {x: -0.7524029, y: -0.36385733, z: -0.5774307}
+      originOffset: {x: 2.0035427, y: 2.048465, z: 2.0100667}
       _maxGirth: 0.138
       _minGirth: 0.010000001
       girthCurve:
@@ -14660,8 +14737,8 @@ MonoBehaviour:
       helperStructureLevelId: 5
       shaperOffset: 0
       _position: 0.69985193
-      parentOffset: {x: 0.02245681, y: -0.010979178, z: -0.0037795478}
-      originOffset: {x: -0.5278938, y: -0.25112325, z: -0.40620953}
+      parentOffset: {x: 0.0029735137, y: 0.0075629046, z: -0.010536419}
+      originOffset: {x: 1.4062201, y: 1.4557319, z: 1.3992342}
       _maxGirth: 0.138
       _minGirth: 0.010000001
       girthCurve:
@@ -16409,7 +16486,7 @@ MonoBehaviour:
       shaperOffset: 0
       _position: 1
       parentOffset: {x: 0, y: 0, z: 0}
-      originOffset: {x: -0.00000029616058, y: 6.2707415, z: -0.0000027120113}
+      originOffset: {x: 2, y: 2, z: 2}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -16516,7 +16593,7 @@ MonoBehaviour:
       shaperOffset: 0
       _position: 1
       parentOffset: {x: 0, y: 0, z: 0}
-      originOffset: {x: -0.26542357, y: 8.194775, z: -1.4865384}
+      originOffset: {x: 4, y: 4, z: 4}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -16622,8 +16699,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.8333334
-      parentOffset: {x: 0.029810183, y: 0.012041092, z: 0.0054117152}
-      originOffset: {x: -0.21008497, y: 7.8749, z: -1.2216341}
+      parentOffset: {x: -0.033345614, y: 0.047780897, z: -0.014435291}
+      originOffset: {x: 3.633321, y: 3.7144477, z: 3.6522315}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -16729,8 +16806,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.6666667
-      parentOffset: {x: -0.01527309, y: -0.025752515, z: -0.01922474}
-      originOffset: {x: -0.15196447, y: 7.5511312, z: -0.94939256}
+      parentOffset: {x: 0.014369181, y: -0.038093645, z: 0.023724467}
+      originOffset: {x: 3.3477027, y: 3.29524, z: 3.357058}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -16836,8 +16913,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.5
-      parentOffset: {x: -0.019326117, y: 0.04447665, z: 0.026577603}
-      originOffset: {x: -0.15936522, y: 7.3330007, z: -0.5846189}
+      parentOffset: {x: 0.009478856, y: 0.017643366, z: -0.027122227}
+      originOffset: {x: 3.0094788, y: 3.0176435, z: 2.9728777}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -16943,8 +17020,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.33333334
-      parentOffset: {x: 0.07210277, y: -0.03202186, z: -0.04091377}
-      originOffset: {x: 0.053962298, y: 7.0270896, z: -0.3094982}
+      parentOffset: {x: 0.02509628, y: 0.007272791, z: -0.03236907}
+      originOffset: {x: 2.691763, y: 2.6739395, z: 2.6342976}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -17050,8 +17127,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.16666667
-      parentOffset: {x: -0.08361071, y: 0.0040409155, z: 0.05132561}
-      originOffset: {x: -0.097758316, y: 6.6837573, z: -0.03349851}
+      parentOffset: {x: -0.04439976, y: 0.020912055, z: 0.02348771}
+      originOffset: {x: 2.2889335, y: 2.3542454, z: 2.356821}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -17157,8 +17234,8 @@ MonoBehaviour:
       helperStructureLevelId: 1
       shaperOffset: 0
       _position: 0.9244082
-      parentOffset: {x: -0.018462878, y: -0.0045406036, z: 0.076318994}
-      originOffset: {x: -0.022644332, y: 5.792014, z: 0.108399585}
+      parentOffset: {x: -0.020841287, y: -0.009644408, z: 0.030485699}
+      originOffset: {x: 1.8279752, y: 1.839172, z: 1.8793021}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -17265,7 +17342,7 @@ MonoBehaviour:
       shaperOffset: 0
       _position: 1
       parentOffset: {x: 0, y: 0, z: 0}
-      originOffset: {x: -0.979451, y: 7.4293704, z: 2.0788321}
+      originOffset: {x: 3.8279753, y: 3.839172, z: 3.879302}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -17371,8 +17448,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.75
-      parentOffset: {x: -0.016143296, y: -0.01809986, z: -0.004737339}
-      originOffset: {x: -0.7577922, y: 6.997739, z: 1.5836561}
+      parentOffset: {x: 0.0014595779, y: -0.0005287813, z: -0.0009307966}
+      originOffset: {x: 3.3294349, y: 3.338643, z: 3.3783712}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -17478,8 +17555,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.5
-      parentOffset: {x: 0.030373279, y: -0.018780455, z: 0.009949178}
-      originOffset: {x: -0.47010535, y: 6.592587, z: 1.1019052}
+      parentOffset: {x: -0.05281559, y: 0.045731526, z: 0.007084065}
+      originOffset: {x: 2.7751596, y: 2.8849034, z: 2.8863862}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -17585,8 +17662,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.25
-      parentOffset: {x: -0.016919926, y: 0.018656619, z: -0.053610332}
-      originOffset: {x: -0.2533266, y: 6.260788, z: 0.52508175}
+      parentOffset: {x: 0.017828299, y: -0.019786954, z: 0.001958651}
+      originOffset: {x: 2.3458035, y: 2.319385, z: 2.3812606}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -17692,8 +17769,8 @@ MonoBehaviour:
       helperStructureLevelId: 1
       shaperOffset: 0
       _position: 0.84881634
-      parentOffset: {x: 0.08162873, y: -0.021202976, z: -0.075455315}
-      originOffset: {x: 0.07737517, y: 5.3013487, z: -0.09240758}
+      parentOffset: {x: 0.050612494, y: -0.01625406, z: -0.03435843}
+      originOffset: {x: 1.7482452, y: 1.6813787, z: 1.6632744}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -17800,7 +17877,7 @@ MonoBehaviour:
       shaperOffset: 0
       _position: 1
       parentOffset: {x: 0, y: 0, z: 0}
-      originOffset: {x: 2.2894223, y: 6.335441, z: -1.2737124}
+      originOffset: {x: 3.7482452, y: 3.6813788, z: 3.6632743}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -17906,8 +17983,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.8333334
-      parentOffset: {x: 0.009950844, y: -0.005728832, z: -0.0065941103}
-      originOffset: {x: 1.9375885, y: 6.1326003, z: -1.0917835}
+      parentOffset: {x: 0.047863074, y: -0.015120457, z: -0.03274262}
+      originOffset: {x: 3.462775, y: 3.3329248, z: 3.2971988}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -18013,8 +18090,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.6666667
-      parentOffset: {x: 0.011236888, y: -0.012881444, z: -0.021637999}
-      originOffset: {x: 1.5407144, y: 5.9844894, z: -0.93760514}
+      parentOffset: {x: -0.014553751, y: 0.010588564, z: 0.0039651864}
+      originOffset: {x: 3.067025, y: 3.0253007, z: 3.000573}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -18120,8 +18197,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.5
-      parentOffset: {x: 0.02335269, y: -0.011168707, z: 0.035099942}
-      originOffset: {x: 1.2228789, y: 5.7953477, z: -0.62615645}
+      parentOffset: {x: 0.053215653, y: -0.05585102, z: 0.002635369}
+      originOffset: {x: 2.801461, y: 2.6255279, z: 2.6659098}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -18227,8 +18304,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.33333334
-      parentOffset: {x: 0.011481443, y: -0.019021377, z: -0.016393661}
-      originOffset: {x: 0.81025165, y: 5.639226, z: -0.5206065}
+      parentOffset: {x: 0.003206118, y: -0.010781143, z: 0.007575026}
+      originOffset: {x: 2.418118, y: 2.3372643, z: 2.337516}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -18334,8 +18411,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.16666667
-      parentOffset: {x: -0.035375796, y: 0.040310197, z: 0.011032016}
-      originOffset: {x: 0.38881633, y: 5.5514164, z: -0.2849046}
+      parentOffset: {x: 0.008135289, y: 0.020139102, z: -0.028274396}
+      originOffset: {x: 2.0897138, y: 2.0348513, z: 1.9683334}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -18441,8 +18518,8 @@ MonoBehaviour:
       helperStructureLevelId: 1
       shaperOffset: 0
       _position: 0.7732245
-      parentOffset: {x: -0.123481005, y: 0.012278881, z: 0.0076472852}
-      originOffset: {x: -0.10509448, y: 4.8608274, z: -0.018227449}
+      parentOffset: {x: -0.02011146, y: 0.017315008, z: 0.002796457}
+      originOffset: {x: 1.5263375, y: 1.563764, z: 1.5492454}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -18549,7 +18626,7 @@ MonoBehaviour:
       shaperOffset: 0
       _position: 1
       parentOffset: {x: 0, y: 0, z: 0}
-      originOffset: {x: -3.0583138, y: 5.372319, z: -0.42785835}
+      originOffset: {x: 3.5263376, y: 3.563764, z: 3.5492454}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -18655,8 +18732,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.75
-      parentOffset: {x: 0.025904082, y: 0.0409209, z: -0.008798614}
-      originOffset: {x: -2.2961576, y: 5.276891, z: -0.32870287}
+      parentOffset: {x: -0.0065303864, y: 0.031243876, z: -0.024713492}
+      originOffset: {x: 3.0198073, y: 3.095008, z: 3.0245318}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -18762,8 +18839,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.5
-      parentOffset: {x: -0.0096243955, y: -0.028865471, z: -0.0014637662}
-      originOffset: {x: -1.5924976, y: 5.0784583, z: -0.22554886}
+      parentOffset: {x: 0.015141394, y: 0.015461882, z: -0.03060328}
+      originOffset: {x: 2.541479, y: 2.579226, z: 2.5186422}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -18869,8 +18946,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.25
-      parentOffset: {x: -0.018945124, y: 0.05042107, z: 0.062028132}
-      originOffset: {x: -0.8635372, y: 5.012401, z: -0.08013157}
+      parentOffset: {x: -0.011237262, y: 0.0013603641, z: 0.009876898}
+      originOffset: {x: 2.0151005, y: 2.0651245, z: 2.0591223}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -18976,8 +19053,8 @@ MonoBehaviour:
       helperStructureLevelId: 1
       shaperOffset: 0
       _position: 0.6976326
-      parentOffset: {x: 0.10445118, y: 0.006022449, z: 0.07993045}
-      originOffset: {x: 0.060599472, y: 4.3805676, z: 0.08618289}
+      parentOffset: {x: -0.014272626, y: 0.026640449, z: -0.012367825}
+      originOffset: {x: 1.3809928, y: 1.4219058, z: 1.3828975}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -19084,7 +19161,7 @@ MonoBehaviour:
       shaperOffset: 0
       _position: 1
       parentOffset: {x: 0, y: 0, z: 0}
-      originOffset: {x: 2.176782, y: 4.7846527, z: 2.1222675}
+      originOffset: {x: 3.380993, y: 3.4219058, z: 3.3828974}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -19190,8 +19267,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.75
-      parentOffset: {x: 0.004137072, y: 0.03918878, z: -0.02803125}
-      originOffset: {x: 1.6625423, y: 4.697575, z: 1.5791677}
+      parentOffset: {x: -0.02270277, y: 0.00906774, z: 0.013635032}
+      originOffset: {x: 2.8582902, y: 2.9309735, z: 2.8965323}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -19297,8 +19374,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.5
-      parentOffset: {x: 0.010961298, y: -0.024687154, z: 0.052595302}
-      originOffset: {x: 1.1399283, y: 4.5253873, z: 1.1521538}
+      parentOffset: {x: -0.017411048, y: 0.013334086, z: 0.004076965}
+      originOffset: {x: 2.363582, y: 2.4352398, z: 2.3869743}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -19404,8 +19481,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.25
-      parentOffset: {x: 0.034679223, y: -0.04405032, z: -0.03268955}
-      originOffset: {x: 0.6146562, y: 4.4479218, z: 0.57048434}
+      parentOffset: {x: 0.03766983, y: -0.054990675, z: 0.017320845}
+      originOffset: {x: 1.9186625, y: 1.8669151, z: 1.9002184}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -19511,8 +19588,8 @@ MonoBehaviour:
       helperStructureLevelId: 1
       shaperOffset: 0
       _position: 0.6220408
-      parentOffset: {x: -0.017792407, y: 0.0015948582, z: -0.1426862}
-      originOffset: {x: -0.0042750984, y: 3.9021373, z: -0.12523606}
+      parentOffset: {x: 0.0024225658, y: 0.027144365, z: -0.029566934}
+      originOffset: {x: 1.2465042, y: 1.2712259, z: 1.2145147}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -19619,7 +19696,7 @@ MonoBehaviour:
       shaperOffset: 0
       _position: 1
       parentOffset: {x: 0, y: 0, z: 0}
-      originOffset: {x: -0.56455153, y: 3.2703388, z: -3.2682054}
+      originOffset: {x: 3.2465043, y: 3.271226, z: 3.2145147}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -19725,8 +19802,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.8333334
-      parentOffset: {x: -0.011450213, y: -0.013810655, z: 0.0063009914}
-      originOffset: {x: -0.48897502, y: 3.350133, z: -2.733967}
+      parentOffset: {x: 0.03536489, y: 0.015363666, z: -0.050728563}
+      originOffset: {x: 2.9485357, y: 2.9532564, z: 2.830453}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -19832,8 +19909,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.6666667
-      parentOffset: {x: -0.012363693, y: 0.03496854, z: 0.014877073}
-      originOffset: {x: -0.39376685, y: 3.5202806, z: -2.2054727}
+      parentOffset: {x: -0.015090199, y: 0.0017304415, z: 0.013359759}
+      originOffset: {x: 2.5647473, y: 2.6062899, z: 2.561208}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -19939,8 +20016,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.5
-      parentOffset: {x: 0.03342203, y: -0.0024778931, z: 0.0007837224}
-      originOffset: {x: -0.2238085, y: 3.5813005, z: -1.6999626}
+      parentOffset: {x: -0.0314996, y: 0.017367642, z: 0.014131959}
+      originOffset: {x: 2.2150047, y: 2.2885935, z: 2.2286468}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -20046,8 +20123,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.33333334
-      parentOffset: {x: -0.06313035, y: 0.03920335, z: 0.0275408}
-      originOffset: {x: -0.2863624, y: 3.6836846, z: -1.1304846}
+      parentOffset: {x: -0.037806187, y: 0.036969967, z: 0.0008362193}
+      originOffset: {x: 1.8753647, y: 1.9748627, z: 1.8820177}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -20153,8 +20230,8 @@ MonoBehaviour:
       helperStructureLevelId: 2
       shaperOffset: 0
       _position: 0.16666667
-      parentOffset: {x: 0.06917498, y: 0.028607655, z: -0.008148765}
-      originOffset: {x: -0.013658673, y: 3.8143377, z: -0.65739167}
+      parentOffset: {x: -0.016710987, y: 0.021887569, z: -0.005176583}
+      originOffset: {x: 1.5631266, y: 1.6264468, z: 1.5426716}
       _maxGirth: 0.3480366
       _minGirth: 0.0137425745
       girthCurve:
@@ -20260,8 +20337,8 @@ MonoBehaviour:
       helperStructureLevelId: 3
       shaperOffset: 0
       _position: 0.058938034
-      parentOffset: {x: -0.1520733, y: -0.0074090566, z: -0.022692025}
-      originOffset: {x: -0.1447252, y: 0.36216527, z: -0.0018797703}
+      parentOffset: {x: -0.08256535, y: 0.07305149, z: 0.009513863}
+      originOffset: {x: 0.035310715, y: 0.19092757, z: 0.12738994}
       _maxGirth: 0.32000002
       _minGirth: 0.102
       girthCurve:
@@ -20367,8 +20444,8 @@ MonoBehaviour:
       helperStructureLevelId: 3
       shaperOffset: 0
       _position: 0.054348286
-      parentOffset: {x: -0.031102976, y: 0.0038157047, z: -0.15644746}
-      originOffset: {x: -0.022309978, y: 0.34460977, z: -0.13517794}
+      parentOffset: {x: 0.011736988, y: 0.07728637, z: -0.08902337}
+      originOffset: {x: 0.120433554, y: 0.18598294, z: 0.019673198}
       _maxGirth: 0.32000002
       _minGirth: 0.102
       girthCurve:
@@ -20474,8 +20551,8 @@ MonoBehaviour:
       helperStructureLevelId: 3
       shaperOffset: 0
       _position: 0.04363933
-      parentOffset: {x: 0.123432994, y: 0.0030319022, z: -0.06354601}
-      originOffset: {x: 0.1301758, y: 0.27667484, z: -0.04563041}
+      parentOffset: {x: 0.15473132, y: -0.05816781, z: -0.09656352}
+      originOffset: {x: 0.24200997, y: 0.029110838, z: -0.009284869}
       _maxGirth: 0.32000002
       _minGirth: 0.102
       girthCurve:
@@ -20581,8 +20658,8 @@ MonoBehaviour:
       helperStructureLevelId: 3
       shaperOffset: 0
       _position: 0.026287312
-      parentOffset: {x: 0.084288634, y: -0.0025820932, z: 0.087793075}
-      originOffset: {x: 0.07803797, y: 0.162254, z: 0.09321851}
+      parentOffset: {x: 0.0963218, y: -0.18553017, z: 0.0892084}
+      originOffset: {x: 0.14889643, y: -0.13295555, z: 0.14178303}
       _maxGirth: 0.32000002
       _minGirth: 0.102
       girthCurve:
@@ -20831,3 +20908,4 @@ SceneRoots:
   - {fileID: 399350835}
   - {fileID: 728970129}
   - {fileID: 104403385}
+  - {fileID: 1441838692}
