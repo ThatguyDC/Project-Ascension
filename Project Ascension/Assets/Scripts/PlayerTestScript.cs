@@ -12,6 +12,7 @@ public class PlayerTestScript : MonoBehaviour
 
     public Objective ObjectiveScript;
     public AudioManager AudioManagerScript;
+    public Ladder LadderScript;
 
 
     [Header("Game Information")]
@@ -22,14 +23,21 @@ public class PlayerTestScript : MonoBehaviour
 
     public CharacterController PlayerController;
     public GameObject Player;
+    public Rigidbody rb;
+
+    
 
     
 
     public float NormalSpeed;
     public float WalkSpeed = 50f;
     public float SprintSpeed = 65f;
+    public float ClimbSpeed = 3f; //Initial climbing speed
+    public float TargetClimbSpeed = 0f; //Speed to reduce to 
+    private float SpeedReductionTime = 5f;  // Time over which to reduce the speed
 
     public bool Sprinting;
+    public bool Climbing;
 
     public float TurnSmoothing = 0.1f;
     public float TurnSmoothVelocity;
@@ -67,13 +75,7 @@ public class PlayerTestScript : MonoBehaviour
     private GameObject SourceObj;
 
     [Header("Pickup Information")]
-    /*
-    public GameObject SpawnedObj;
-    public GameObject ObjectToPickUp;
-    public GameObject SpawnObject;
-    public GameObject RefPoint;
-    public GameObject SourceObj;
-    */
+    
 
 
     [SerializeField] private float SpawnOffsetX = 4f;
@@ -86,6 +88,7 @@ public class PlayerTestScript : MonoBehaviour
     private void Start()
     {
         PlayerAnimator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
     }
     private void Update()
     {
@@ -96,17 +99,35 @@ public class PlayerTestScript : MonoBehaviour
 
     }
 
-    private void OnDrawGizmos()
-    {
-        DebugCollider();
-
-    }
     void FixedUpdate()
     {
         Move();
         Sprint();
     }
 
+    private void OnDrawGizmos()
+    {
+        DebugCollider();
+
+    }
+
+    #region Colliders
+    
+
+    private void DebugCollider()
+    {
+        CharacterController characterController = Player.GetComponent<CharacterController>();
+        if (characterController != null)
+        {
+            // Draw a wireframe of the collider bounds
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireCube(characterController.bounds.center, characterController.bounds.size);
+        }
+    }
+
+    #endregion
+
+    #region Triggers
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "EndPoint")
@@ -115,8 +136,10 @@ public class PlayerTestScript : MonoBehaviour
             ObjectiveScript.ObjectiveReached();
             AudioManagerScript.ObjectiveReached(); //play completion sound
         }
-    }
 
+        
+    }
+    
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.layer == 6 && CarryingObject == false) //if object is on layer 6, aka PickupLayer, then do stuff
@@ -135,19 +158,28 @@ public class PlayerTestScript : MonoBehaviour
 
         }
 
+        if(other.tag == "Ladder")
+        {
+            Debug.Log("Hitting Ladder");
+            Climbing = true;
+            Debug.Log(Climbing);
+        }
+
         
     }
 
-    private void DebugCollider()
+    private void OnTriggerExit(Collider other)
     {
-        CharacterController characterController = Player.GetComponent<CharacterController>();
-        if (characterController != null)
+        if(other.tag == "Ladder")
         {
-            // Draw a wireframe of the collider bounds
-            Gizmos.color = Color.green;
-            Gizmos.DrawWireCube(characterController.bounds.center, characterController.bounds.size);
+            Climbing = false;
+            Move();
         }
     }
+
+    #endregion
+
+
 
     private void Move()
     {
@@ -164,20 +196,37 @@ public class PlayerTestScript : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
         Direction = new Vector3 (horizontal, 0f, vertical).normalized;
 
-        if (Direction.magnitude >= 0.1f)
+        if (!Climbing)
         {
-            float TargetAngle = Mathf.Atan2(Direction.x, Direction.z) * Mathf.Rad2Deg + CameraTransform.eulerAngles.y; //returns an angle amt to turn player clockwise from player forward direction
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, TargetAngle, ref TurnSmoothVelocity, TurnSmoothing);
-            transform.rotation = Quaternion.Euler(0f, angle, 0f);
-            Vector3 MoveDirection = Quaternion.Euler(0f, TargetAngle, 0f) * Vector3.forward;
-            PlayerController.Move(MoveDirection.normalized * NormalSpeed * Time.fixedDeltaTime);
 
-            
+
+
+            if (Direction.magnitude >= 0.1f)
+            {
+                float TargetAngle = Mathf.Atan2(Direction.x, Direction.z) * Mathf.Rad2Deg + CameraTransform.eulerAngles.y; //returns an angle amt to turn player clockwise from player forward direction
+                float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, TargetAngle, ref TurnSmoothVelocity, TurnSmoothing);
+                transform.rotation = Quaternion.Euler(0f, angle, 0f);
+                Vector3 MoveDirection = Quaternion.Euler(0f, TargetAngle, 0f) * Vector3.forward;
+                PlayerController.Move(MoveDirection.normalized * NormalSpeed * Time.fixedDeltaTime);
+
+
+            }
+
+            // Apply gravity
+            Velocity.y += Gravity * Time.deltaTime;
+            PlayerController.Move(Velocity * Time.deltaTime);
+
         }
+       
+        else
+        {
 
-        // Apply gravity
-        Velocity.y += Gravity * Time.deltaTime;
-        PlayerController.Move(Velocity * Time.deltaTime);
+            Climb();
+
+        }
+        
+
+        
     }
 
     private void Sprint()
@@ -195,6 +244,46 @@ public class PlayerTestScript : MonoBehaviour
         }
     }
 
+    #region Climbing
+    private void Climb()
+    {
+        // When climbing, halt forward movement
+        Debug.Log("Player is climbing, halting forward movement");
+
+
+        Vector3 ClimbDirection = Vector3.up; // Move upwards
+        PlayerController.Move(ClimbDirection.normalized * ClimbSpeed * Time.fixedDeltaTime);
+
+         
+
+        // Log the climbing event (optional for debugging)
+        Debug.Log("Player is climbing...");
+        
+    }
+
+    // Coroutine to smoothly transition back to normal gravity
+    private IEnumerator SmoothExitFromClimb()
+    {
+        float transitionTime = 0.5f;  // Time to transition back to normal state
+        float elapsedTime = 0f;
+
+        while (elapsedTime < transitionTime)
+        {
+            elapsedTime += Time.deltaTime;
+
+            // Gradually reduce climbing velocity to a normal fall
+            ClimbSpeed = Mathf.Lerp(ClimbSpeed, TargetClimbSpeed, elapsedTime);
+
+            yield return null; // Wait for the next frame
+        }
+
+        // Re-enable gravity and reset velocity
+        rb.useGravity = true;
+    }
+
+    #endregion
+
+    #region Player Animation
     private void AnimatePlayer()
     {
         //Idle
@@ -219,7 +308,10 @@ public class PlayerTestScript : MonoBehaviour
         }
 
     }
+    #endregion
 
+
+    #region Object Interaction
     public void PickUpObject(GameObject ObjectToSpawn, GameObject RefPoint, GameObject SourceObj) //typeOf GameObject to indicate what is being passed through
     {
         if (CarryingObject == false && ObjectToSpawn != null && RefPoint != null && SourceObj != null && Input.GetKeyDown(KeyCode.E)) //if the params are filled and E is pressed, 
@@ -283,5 +375,7 @@ public class PlayerTestScript : MonoBehaviour
 
         }
     }
+
+    #endregion
 
 }
