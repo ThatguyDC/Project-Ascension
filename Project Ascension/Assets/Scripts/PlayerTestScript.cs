@@ -12,6 +12,7 @@ public class PlayerTestScript : MonoBehaviour
 
     public Objective ObjectiveScript;
     public AudioManager AudioManagerScript;
+    public uiManager uiManagerScript;
     public Ladder LadderScript;
 
 
