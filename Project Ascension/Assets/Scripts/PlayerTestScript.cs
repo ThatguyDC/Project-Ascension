@@ -20,6 +20,8 @@ public class PlayerTestScript : MonoBehaviour
     //Game State
     public bool IsPaused = false;
 
+    
+
     [Header("Player Information")]
 
     public CharacterController PlayerController;
@@ -37,8 +39,12 @@ public class PlayerTestScript : MonoBehaviour
     public float TargetClimbSpeed = 0f; //Speed to reduce to 
     private float SpeedReductionTime = 5f;  // Time over which to reduce the speed
 
+ 
+    private float StopMovementDelay = 5f; //Time that speed is set to zero in StopMove function
+
     public bool Sprinting;
     public bool Climbing;
+    
 
     public float TurnSmoothing = 0.1f;
     public float TurnSmoothVelocity;
@@ -48,6 +54,8 @@ public class PlayerTestScript : MonoBehaviour
 
     public LayerMask GroundMask; // Layer mask to specify what layers are considered ground
     public bool IsGrounded; // Check if the player is on the ground
+    public GameObject GroundCheckObj;
+   
 
     private Vector3 Velocity; // Current velocity of the player
     private float Gravity = -9.81f;
@@ -96,6 +104,9 @@ public class PlayerTestScript : MonoBehaviour
         
         AnimatePlayer();
         DropObject();
+        GroundCheck();
+
+
 
 
     }
@@ -104,6 +115,7 @@ public class PlayerTestScript : MonoBehaviour
     {
         Move();
         Sprint();
+        
     }
 
     private void OnDrawGizmos()
@@ -125,6 +137,8 @@ public class PlayerTestScript : MonoBehaviour
             Gizmos.DrawWireCube(characterController.bounds.center, characterController.bounds.size);
         }
     }
+
+    
 
     #endregion
 
@@ -180,27 +194,28 @@ public class PlayerTestScript : MonoBehaviour
 
     #endregion
 
+    private void GroundCheck()
+    {
+
+        IsGrounded = Physics.CheckSphere(GroundCheckObj.transform.position, GroundCheckDistance, GroundMask);
+
+    }
+   
+
 
 
     private void Move()
     {
         Cursor.lockState = CursorLockMode.Locked;
 
-        // Ground check
-        IsGrounded = Physics.CheckSphere(transform.position, GroundCheckDistance, GroundMask);
-        if (IsGrounded && Velocity.y < 0)
-        {
-            Velocity.y = -2f; // Ensures the player sticks to the ground
-        }
 
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Direction = new Vector3 (horizontal, 0f, vertical).normalized;
 
+
         if (!Climbing)
         {
-
-
 
             if (Direction.magnitude >= 0.1f)
             {
@@ -214,20 +229,15 @@ public class PlayerTestScript : MonoBehaviour
             }
 
             // Apply gravity
-            Velocity.y += Gravity * Time.deltaTime;
+            Velocity.y = Gravity * Time.deltaTime;
             PlayerController.Move(Velocity * Time.deltaTime);
 
         }
-       
+        
         else
         {
-
             Climb();
-
         }
-        
-
-        
     }
 
     private void Sprint()
@@ -301,12 +311,32 @@ public class PlayerTestScript : MonoBehaviour
             //Debug.Log("Walk");
 
         }
+
+
         //Sprint
-        else
+         if (Sprinting)
         {
             PlayerAnimator.SetFloat("Speed", 1);
             //Debug.Log("Sprint");
         }
+
+         if (!IsGrounded)
+        {
+            PlayerAnimator.SetBool("Falling", true); //Idle falling anim plays
+        }
+
+         if (IsGrounded)
+        {
+            PlayerAnimator.SetBool("Falling", false); //hard landing anim plays
+            
+            
+
+
+        }
+
+
+
+
 
     }
     #endregion
