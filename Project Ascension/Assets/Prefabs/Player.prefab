@@ -31,6 +31,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8959780640450044472}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2900383830988253706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7135717603973899068}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7135717603973899068
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2900383830988253706}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.98407435, z: 0, w: 0.17775741}
+  m_LocalPosition: {x: -0.02676928, y: 0.008000016, z: 0.2341634}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8959780640450044472}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4802844915924905667
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,31 +138,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1df551221c3dd3944858ab82dfb4f989, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 22.08
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1df551221c3dd3944858ab82dfb4f989, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.383
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1df551221c3dd3944858ab82dfb4f989, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 6.56
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1df551221c3dd3944858ab82dfb4f989, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.17775741
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1df551221c3dd3944858ab82dfb4f989, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1df551221c3dd3944858ab82dfb4f989, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.98407435
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1df551221c3dd3944858ab82dfb4f989, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1df551221c3dd3944858ab82dfb4f989, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -139,7 +170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1df551221c3dd3944858ab82dfb4f989, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 159.522
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1df551221c3dd3944858ab82dfb4f989, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1062,6 +1093,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1df551221c3dd3944858ab82dfb4f989, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1877259698976204675}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1df551221c3dd3944858ab82dfb4f989, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7135717603973899068}
     - targetCorrespondingSourceObject: {fileID: 1852576806548013000, guid: 1df551221c3dd3944858ab82dfb4f989, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1007118454843798513}
@@ -1220,21 +1254,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjectiveScript: {fileID: 0}
   AudioManagerScript: {fileID: 0}
+  uiManagerScript: {fileID: 0}
+  LadderScript: {fileID: 0}
   IsPaused: 0
   PlayerController: {fileID: 4808837776779471353}
   Player: {fileID: 8582833572677826690}
   NormalSpeed: 0
   WalkSpeed: 2
   SprintSpeed: 3.5
+  ClimbSpeed: 11
+  TargetClimbSpeed: 0
   Sprinting: 0
+  Climbing: 0
   TurnSmoothing: 0.1
   TurnSmoothVelocity: 0
   Direction: {x: 0, y: 0, z: 0}
   GroundMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   IsGrounded: 0
-  GroundCheckDistance: 0.2
+  GroundCheckObj: {fileID: 2900383830988253706}
+  GroundCheckDistance: 0.1
   PlayerAudioSource: {fileID: 2991630759884904723}
   CameraTransform: {fileID: 0}
   SpawnOffsetX: 0

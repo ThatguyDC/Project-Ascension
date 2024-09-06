@@ -26,7 +26,7 @@ public class PlayerTestScript : MonoBehaviour
 
     public CharacterController PlayerController;
     public GameObject Player;
-    public Rigidbody rb;
+ 
 
     
 
@@ -97,7 +97,6 @@ public class PlayerTestScript : MonoBehaviour
     private void Start()
     {
         PlayerAnimator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody>();
     }
     private void Update()
     {
@@ -272,25 +271,7 @@ public class PlayerTestScript : MonoBehaviour
         
     }
 
-    // Coroutine to smoothly transition back to normal gravity
-    private IEnumerator SmoothExitFromClimb()
-    {
-        float transitionTime = 0.5f;  // Time to transition back to normal state
-        float elapsedTime = 0f;
-
-        while (elapsedTime < transitionTime)
-        {
-            elapsedTime += Time.deltaTime;
-
-            // Gradually reduce climbing velocity to a normal fall
-            ClimbSpeed = Mathf.Lerp(ClimbSpeed, TargetClimbSpeed, elapsedTime);
-
-            yield return null; // Wait for the next frame
-        }
-
-        // Re-enable gravity and reset velocity
-        rb.useGravity = true;
-    }
+   
 
     #endregion
 
