@@ -44,7 +44,7 @@ public class PlayerTestScript : MonoBehaviour
 
     public bool Sprinting;
     public bool Climbing;
-    
+
 
     public float TurnSmoothing = 0.1f;
     public float TurnSmoothVelocity;
@@ -64,6 +64,9 @@ public class PlayerTestScript : MonoBehaviour
 
     //Animations
     private Animator PlayerAnimator;
+    public bool InputDisabled;
+    private string LandingAnimState = "Hard Landing";  // The name of the animation state
+
 
     //Audio
 
@@ -193,6 +196,9 @@ public class PlayerTestScript : MonoBehaviour
 
     #endregion
 
+
+
+    #region Movement
     private void GroundCheck()
     {
 
@@ -213,7 +219,7 @@ public class PlayerTestScript : MonoBehaviour
         Direction = new Vector3 (horizontal, 0f, vertical).normalized;
 
 
-        if (!Climbing)
+        if (!Climbing && !InputDisabled)
         {
 
             if (Direction.magnitude >= 0.1f)
@@ -233,7 +239,7 @@ public class PlayerTestScript : MonoBehaviour
 
         }
         
-        else
+        else if(Climbing)
         {
             Climb();
         }
@@ -254,6 +260,8 @@ public class PlayerTestScript : MonoBehaviour
         }
     }
 
+#endregion
+
     #region Climbing
     private void Climb()
     {
@@ -270,12 +278,12 @@ public class PlayerTestScript : MonoBehaviour
         Debug.Log("Player is climbing...");
         
     }
+ #endregion
 
-   
-
-    #endregion
+    
 
     #region Player Animation
+
     private void AnimatePlayer()
     {
         //Idle
@@ -309,16 +317,25 @@ public class PlayerTestScript : MonoBehaviour
          if (IsGrounded)
         {
             PlayerAnimator.SetBool("Falling", false); //hard landing anim plays
-            
-            
+            CheckLandingAnimState(); //checks if landing animation is finished
 
-
+            
         }
 
+    }
 
+    private void CheckLandingAnimState()
+    {
+        AnimatorStateInfo stateInfo = PlayerAnimator.GetCurrentAnimatorStateInfo(0);
 
-
-
+        if (stateInfo.IsName(LandingAnimState) && !InputDisabled)
+        {
+            InputDisabled = true;  // Disable input when animation starts
+        }
+        else if (!stateInfo.IsName(LandingAnimState) && InputDisabled)
+        {
+            InputDisabled = false;  // Re-enable input when animation ends
+        }
     }
     #endregion
 
@@ -326,7 +343,11 @@ public class PlayerTestScript : MonoBehaviour
     #region Object Interaction
     public void PickUpObject(GameObject ObjectToSpawn, GameObject RefPoint, GameObject SourceObj) //typeOf GameObject to indicate what is being passed through
     {
-        if (CarryingObject == false && ObjectToSpawn != null && RefPoint != null && SourceObj != null && Input.GetKeyDown(KeyCode.E)) //if the params are filled and E is pressed, 
+        if (CarryingObject == false &&
+            ObjectToSpawn != null &&
+            RefPoint != null &&
+            SourceObj != null &&
+            Input.GetKeyDown(KeyCode.E)) //if the params are filled and E is pressed, 
         {
             SpawnedObj = Instantiate(ObjectToSpawn, RefPoint.transform.position, RefPoint.transform.rotation); //spawn passed obj at passed ref point's position and rotation
             SpawnedObj.transform.SetParent(RefPoint.transform); //set spawned object's parent as RefPoint

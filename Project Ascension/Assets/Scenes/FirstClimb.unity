@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 2039a0ad0a9d05549928b70362f54902, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 20d4f77b9022eab48b4d94599ed4bf82, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.188276, g: 0.19113809, b: 0.1910977, a: 1}
+  m_IndirectSpecularColor: {r: 0.85155183, g: 0.8996677, b: 0.9541852, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -478,7 +478,7 @@ MonoBehaviour:
   _localPipeline: {fileID: 522451293}
   lastUndoProcessed: 39
   prefabPath: Assets\BroccoTree_000.prefab
-  _instanceId: 26494
+  _instanceId: 84796
 --- !u!4 &104403385
 Transform:
   m_ObjectHideFlags: 0
@@ -4011,7 +4011,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 245027696}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 599eb9842805191a4ad9ccfe9f38d4c3, type: 3}
   m_Name: 
@@ -4050,7 +4050,7 @@ MonoBehaviour:
     valueSTWindLeaf2Ripple: {x: 0, y: 0, z: 0, w: 0}
     valueSTWindLeaf2Tumble: {x: 0, y: 0, z: 0, w: 0}
     valueSTWindLeaf2Twitch: {x: 0, y: 0, z: 0, w: 0}
-    valueSTWindFrondRipple: {x: 3.5576923, y: 0.01, z: 2, w: 10}
+    valueSTWindFrondRipple: {x: 37.811676, y: 0.01, z: 2, w: 10}
   customPreviewMode: 0
   windAppliesToRenderer: 1
   _editorWindEnabled: 0
@@ -4597,7 +4597,7 @@ MonoBehaviour:
   _localPipeline: {fileID: 1926603147}
   lastUndoProcessed: 26
   prefabPath: Assets\BroccoTree_001.prefab
-  _instanceId: 26536
+  _instanceId: 84838
 --- !u!4 &399350835
 Transform:
   m_ObjectHideFlags: 0
@@ -5380,7 +5380,7 @@ MonoBehaviour:
   _localPipeline: {fileID: 2016414325}
   lastUndoProcessed: 13
   prefabPath: Assets\BroccoTree_001.prefab
-  _instanceId: 26564
+  _instanceId: 84866
 --- !u!4 &505530571
 Transform:
   m_ObjectHideFlags: 0
@@ -7233,7 +7233,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999474153}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 599eb9842805191a4ad9ccfe9f38d4c3, type: 3}
   m_Name: 
@@ -7272,7 +7272,7 @@ MonoBehaviour:
     valueSTWindLeaf2Ripple: {x: 0, y: 0, z: 0, w: 0}
     valueSTWindLeaf2Tumble: {x: 0, y: 0, z: 0, w: 0}
     valueSTWindLeaf2Twitch: {x: 0, y: 0, z: 0, w: 0}
-    valueSTWindFrondRipple: {x: 3.5576923, y: 0.01, z: 2, w: 10}
+    valueSTWindFrondRipple: {x: 37.811676, y: 0.01, z: 2, w: 10}
   customPreviewMode: 0
   windAppliesToRenderer: 1
   _editorWindEnabled: 0
@@ -8570,7 +8570,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1569098764}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 599eb9842805191a4ad9ccfe9f38d4c3, type: 3}
   m_Name: 
@@ -8609,7 +8609,7 @@ MonoBehaviour:
     valueSTWindLeaf2Ripple: {x: 0, y: 0, z: 0, w: 0}
     valueSTWindLeaf2Tumble: {x: 0, y: 0, z: 0, w: 0}
     valueSTWindLeaf2Twitch: {x: 0, y: 0, z: 0, w: 0}
-    valueSTWindFrondRipple: {x: 3.5576923, y: 0.01, z: 2, w: 10}
+    valueSTWindFrondRipple: {x: 37.478344, y: 0.01, z: 2, w: 10}
   customPreviewMode: 0
   windAppliesToRenderer: 1
   _editorWindEnabled: 0
